@@ -56,14 +56,65 @@ html, body, ul, p {
 }
 
 #piechart-block {
-  background-color: rgb(42, 42, 80);
+  background-color: rgb(206, 99, 183);
   float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#piechart-2-block {
+  background-color: rgb(189, 214, 79);
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#piechart-3-block {
+  background-color: rgb(42, 42, 80);
+  float: right;
   margin-left: 10px;
   margin-top: 10px;
 }
 
 
 /*END DASHBOARD*/
+
+/*COMPARISON*/
+
+#block-1 {
+  background-color: rgb(87, 255, 185);
+  float: left;
+  margin-left: 10px;
+  margin-top: 300px;
+}
+
+#block-2 {
+  background-color: rgb(56, 161, 116);
+  margin-top: 300px;
+}
+
+#block-3 {
+  background-color: rgb(34, 87, 65);
+  margin-top: 98px;
+  float: left;
+  margin-left: 10px;
+}
+
+#block-4 {
+  background-color: rgb(3, 26, 16);
+  margin-top: 98px;
+}
+
+/*END COMPARISON*/
+
+/*GRAPH*/
+#line-graph {
+  background-color: rgb(22, 22, 100);
+  float: left;
+  margin-top: 300px;
+  margin-left: 10px;
+}
+/*END GRAPH*/
 
 a {
   color: rgb(255, 255, 255);

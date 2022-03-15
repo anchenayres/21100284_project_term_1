@@ -12,7 +12,12 @@ console.log(response);
 const ComponentTwo = () =>{
     return (
        <>
-       <p>This is Component Two</p>
+        <canvas id="block-1" width="700" height="400"></canvas>
+        <canvas id="block-2" width="700" height="400"></canvas>
+        <canvas id="block-3" width="700" height="200"></canvas>
+        <canvas id="block-4" width="700" height="200"></canvas>
+                
+            
        </>
     );
 }
