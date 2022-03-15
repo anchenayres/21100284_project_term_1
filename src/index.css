@@ -1,18 +1,75 @@
-html, body, ul, p, li {
+html, body, ul, p {
   margin: 0;
   padding: 0;
+  
 }
 
+.top-nav {
+  background-color: rgb(175, 214, 226);
+  height: 15px;
+  width: 100%;
+}
 .nav {
-  width: 25%;
+  width: 10%;
   height: 100vh;
   float: left;
   background-color: rgb(175, 214, 226);
   color: white;
 }
 
-.App {
-  color: rgb(0, 0, 0);
-  background-color: rgb(175, 214, 226);
+#nav-right {
+  float: right;
+  width: 15%;
+  height: 100vh;
+  background-color: rgb(175, 214, 226)
 }
 
+.App {
+  color: rgb(0, 0, 0);
+  
+}
+
+#circle {
+  background-color: rgb(165, 165, 238);
+  border-radius: 50%;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*DASHBOARD*/
+
+#square-block {
+  background-color: rgb(165, 165, 238);
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#timeline-block {
+  background-color: rgb(22, 22, 100);
+  float: left;
+  margin-left: -200px;
+  margin-top: 220px;
+}
+
+#piechart-block {
+  background-color: rgb(42, 42, 80);
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+
+/*END DASHBOARD*/
+
+a {
+  color: rgb(255, 255, 255);
+}
+
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none; color: rgb(101, 101, 167);}
+a:active {text-decoration: none;}

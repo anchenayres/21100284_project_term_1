@@ -1,7 +1,7 @@
 const ComponentThree = () =>{
     return (
        <>
-       <p></p>
+       <p>This is Component Three</p>
        </>
     );
 }

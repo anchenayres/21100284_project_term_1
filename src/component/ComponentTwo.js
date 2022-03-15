@@ -12,7 +12,7 @@ console.log(response);
 const ComponentTwo = () =>{
     return (
        <>
-       <p></p>
+       <p>This is Component Two</p>
        </>
     );
 }
