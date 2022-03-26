@@ -121,6 +121,67 @@ p1 {
   margin-left: 10px;
 }
 
+/* GRAPHS */
+
+.bar_graph {
+  height: 60vh;
+  width: 60vh;
+  margin-left: 16vh;
+  margin-top: 10vh;
+} 
+
+.polar_area {
+  height: 60vh;
+  width: 60vh;
+  margin-left: 16vh;
+}
+
+.left-panel {
+  width: 40%;
+  height: 80vh;
+  float: left;
+}
+
+.right-panel {
+  width: 60%;
+  height: 80vh;
+  float: left;
+}
+
+.container {
+  width: 100%;
+  height: 80vh;
+  overflow: scroll;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tableItem {
+  width: 80%;
+  height: 55px;
+  border-radius: 10px;
+  background-color: blueviolet;
+  margin-top: 10px;
+}
+
+.tableItem p{
+  float: left;
+  margin-left: 15px;
+}
+
+.tableItem img{
+  float: left;
+  margin-left: 25px;
+  width: 45px;
+  height: 45px;
+}
 
 
 

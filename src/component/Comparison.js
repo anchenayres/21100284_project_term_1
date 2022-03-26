@@ -1,101 +1,113 @@
 import React from "react";
 import axios from "axios";
 import "chart.js/auto";
-import {Bar, PolarArea} from "react-chartjs-2";
+import {Chart as ChartJS, ArcElement, Tooltip, Legend} from 'chart.js';
+import {Doughnut} from "react-chartjs-2";
+import TableItem from "./TableItem";
+import { useState, useEffect, useRef } from 'react';
 
-
-
-axios.get('https://api.le-systeme-solaire.net/rest/bodies/')
-.then((response) => {
-console.log(response);
-})
-.catch((err) => {
-    console.log(err);
-});
-
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const Comparison = (props) =>{
 
+    const [chartInfo, setChartInfo] = useState ([]);
+    const [knownInfo, setKnownInfo] = useState ([]);
+    const [unknownInfo, setUnknownInfo] = useState ([]);
+    const [showPlanets, setShowPlanets] = useState([]);
+    const linkVal = useRef();
+
+    useEffect(()=> {
+        axios.get("https://api.le-systeme-solaire.net/rest/bodies/");
+        axios.get("https://api.le-systeme-solaire.net/rest/knowncount/")
+        .then((res)=> {
+            let data = res.data;
+
+            let unknown = data.filter((item) => item.unknown === true).length;
+            let known = data.filter((item) => item.known === false).length;
+
+            console.log(unknown);
+            console.log(known)
+            
+            setChartInfo([unknown, known]);
+
+            const unknownData = [];
+            const knownData = [];
 
 
+            for(let i = 0; i < data.length; i++) {
+                if (data[i].unkown === false){
+                    knownData.push({
+                        planetName: data[i].name,
+                        
+                    });
+                } else {
+                    unknownData.push({
+                        planetName: data[i].name,  
+                    });
+                }
+            }
 
+            setKnownInfo(knownData);
+            setUnknownInfo(unknownData);
 
+            let startItem = knownData.map((item) => <TableItem id={item.id} frame={item.planetName} /> )
 
+            setShowPlanets(startItem);
 
+        })
+    }, [])
+
+    const knownData = knownData.map((item) => <TableItem id={item.id} frame={item.planetName} /> )
+    const unknownData = unknownData.map((item) => <TableItem id={item.id} frame={item.planetName} /> )
+
+    console.log(knownInfo);
+    console.log(unknownInfo);
+
+    const ChartData = {
+        labels: ['Success', 'Failures'],
+        datasets: [{
+            label: 'Success Fail for Launches',
+            data: [12, 19],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+            ],
+            borderWidth: 1
+        }]                            
+
+    }
+
+    function updatePlanets() {
+        let getValue = linkVal.current.value;
+        if(getValue === "Failed") {
+            setKnownInfo(knownInfo);
+        } else if (getValue === "Success") {
+            setShowPlanets(unknownInfo);
+        }
+    }
 
     return (
-       <>   
-        <div class="tableItem" key={props.id}>
-            <p1>Team Name: </p1>
-            <p1>Season: {props.fullname}</p1>
-            <p1>Home Score: {props.homescore}</p1>
-            <p1>Visitors Score: {props.visitorscore}</p1>
+        <div>
+            <div className="left-panel"> 
+                <Doughnut data={ChartData} />
+            </div>
+            <div className="right-panel">
+                <h3>Mission Information</h3>
+                <select onChange={updatePlanets} ref={linkVal}>
+                    <option>Failed</option>
+                    <option>Success</option>
+                </select>
+                <div className="container">
+                    {showPlanets}
+                </div>
+            </div>
         </div>
-
-
-
-            <div className="bar_graph">
-                <Bar data= {{
-                labels: ['Gauteng', 'Freestate', 'Limpopo', 'Eastern Cape', 'Kwazulu-Natal', 'Northern Cape'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                        
-                    }]
-                }} height={400} width={600} option={{}}
-                    
-                    />
-                
-            </div> 
-
-            <div className="polar_area">
-                <PolarArea data= {{
-                labels: ['Gauteng', 'Freestate', 'Limpopo', 'Eastern Cape', 'Kwazulu-Natal', 'Northern Cape'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                        
-                    }]
-                }} height={400} width={600} option={{}}
-                    
-                    />
-                
-            </div> 
-       </>
+         
+            
     );
 }
 
