@@ -5,7 +5,7 @@ import {Bar, PolarArea} from "react-chartjs-2";
 
 
 
-axios.get('https://www.balldontlie.io/api/v1/stats')
+axios.get('https://api.le-systeme-solaire.net/rest/bodies/')
 .then((response) => {
 console.log(response);
 })
@@ -14,10 +14,26 @@ console.log(response);
 });
 
 
-const Comparison = () =>{
+const Comparison = (props) =>{
+
+
+
+
+
+
+
+
     return (
-       <> 
-       
+       <>   
+        <div class="tableItem" key={props.id}>
+            <p1>Team Name: </p1>
+            <p1>Season: {props.fullname}</p1>
+            <p1>Home Score: {props.homescore}</p1>
+            <p1>Visitors Score: {props.visitorscore}</p1>
+        </div>
+
+
+
             <div className="bar_graph">
                 <Bar data= {{
                 labels: ['Gauteng', 'Freestate', 'Limpopo', 'Eastern Cape', 'Kwazulu-Natal', 'Northern Cape'],

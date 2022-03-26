@@ -2,10 +2,7 @@ import Navigation from "./component/Navigation";
 import Dashboard from "./component/Dashboard";
 import Comparison from "./component/Comparison";
 import Timeline from "./component/Timeline";
-
 import { Routes, Route } from "react-router-dom";
-
-
 
 function App() {
   return (

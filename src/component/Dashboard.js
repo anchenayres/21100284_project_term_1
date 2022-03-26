@@ -5,12 +5,17 @@ const Dashboard = () =>{
     return (
         <>
     
-        <h1>NBA</h1>
+        <h>The Solar System</h>
         <div className="block-text">
-            <p>The National Basketball Association is a professional basketball league in North America. 
-            The league is composed of 30 teams and is one of the four major professional sports leagues in the United States and Canada. 
-            It is the premier men's professional basketball league in the world.</p>
+            <p>Information about solar system</p>
         </div>
+        <div className="timeline_block">Text</div>
+        <div className="bar_block">This is where the bar graph will be</div>
+        <div className="pie_block">This is where the pie graph will be</div>
+        <div className="polar_block">This is where the polar graph will be</div>
+        <div className="block_text_2">Text</div>
+        <div className="block_text_3">Text</div>
+        
         
         </>
         
