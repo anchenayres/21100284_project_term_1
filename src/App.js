@@ -1,22 +1,20 @@
-import './App.css';
-
-import { Route } from "react-router-dom";
-import { Routes } from "react-router-dom";
-
 import Navigation from "./component/Navigation";
-import ComponentTwo from './component/ComponentTwo';
-import ComponentThree from "./component/ComponentThree";
-import Dashboard from './component/Dashboard';
+import Dashboard from "./component/Dashboard";
+import Comparison from "./component/Comparison";
+import Timeline from "./component/Timeline";
+
+import { Routes, Route } from "react-router-dom";
+
+
 
 function App() {
   return (
     <div className="App">
       <Navigation />
-
         <Routes>
         <Route path="/" element = {<Dashboard />} />
-        <Route path="/ComponentTwo" element = {<ComponentTwo  />} />
-        <Route path="/ComponentThree" element = {<ComponentThree />} />
+        <Route path="/Comparison" element = {<Comparison  />} />
+        <Route path="/Timeline" element = {<Timeline />} />
         </Routes>
     </div>
   );

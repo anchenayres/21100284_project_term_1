@@ -1,16 +1,18 @@
-import Background from '../images/weather-image-2.jpg'
+import React from "react";
+import 'chart.js/auto'
 
 const Dashboard = () =>{
     return (
-       
- 
+        <>
     
-
-        <div className='container'>
-            <h1>Weather Forcast</h1>
-            <img src={Background}/>
+        <h1>NBA</h1>
+        <div className="block-text">
+            <p>The National Basketball Association is a professional basketball league in North America. 
+            The league is composed of 30 teams and is one of the four major professional sports leagues in the United States and Canada. 
+            It is the premier men's professional basketball league in the world.</p>
         </div>
-               
+        
+        </>
         
         
 
