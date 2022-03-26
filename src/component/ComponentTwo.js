@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.get('https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m')
+axios.get('https://www.balldontlie.io/api/v1/teams')
 .then((response) => {
 console.log(response);
 })
