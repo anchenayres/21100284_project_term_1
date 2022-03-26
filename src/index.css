@@ -1,27 +1,23 @@
 html, body, ul, p {
   margin: 0;
   padding: 0;
-  
 }
 
 .top-nav {
-  background-color: rgb(175, 214, 226);
+  background-color: rgba(0, 19, 83);
   height: 15px;
   width: 100%;
 }
 .nav {
   width: 10%;
-  height: 100vh;
+  height: 100%;
+  padding-right: 0;
+  margin-right: 0;
   float: left;
-  background-color: rgb(175, 214, 226);
-  color: white;
-}
-
-#nav-right {
-  float: right;
-  width: 15%;
   height: 100vh;
-  background-color: rgb(175, 214, 226)
+  background-color: rgba(0, 19, 83);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .App {
@@ -39,68 +35,66 @@ html, body, ul, p {
   margin-right: auto;
 }
 
-/*DASHBOARD*/
-
-#square-block {
+/*DASHBOARD
+.square-block {
   background-color: rgb(165, 165, 238);
   float: left;
   margin-left: 10px;
   margin-top: 10px;
 }
 
-#timeline-block {
+.timeline-block {
   background-color: rgb(22, 22, 100);
   float: left;
   margin-left: -200px;
   margin-top: 220px;
 }
 
-#piechart-block {
+.piechart-block {
   background-color: rgb(206, 99, 183);
   float: left;
   margin-left: 10px;
   margin-top: 10px;
 }
 
-#piechart-2-block {
+.piechart-2-block {
   background-color: rgb(189, 214, 79);
   float: left;
   margin-left: 10px;
   margin-top: 10px;
 }
 
-#piechart-3-block {
+.piechart-3-block {
   background-color: rgb(42, 42, 80);
   float: right;
   margin-left: 10px;
   margin-top: 10px;
 }
-
-
-/*END DASHBOARD*/
+END DASHBOARD*/
 
 /*COMPARISON*/
 
-#block-1 {
+
+.block-1 {
   background-color: rgb(87, 255, 185);
   float: left;
   margin-left: 10px;
   margin-top: 300px;
 }
 
-#block-2 {
+.block-2 {
   background-color: rgb(56, 161, 116);
   margin-top: 300px;
 }
 
-#block-3 {
+.block-3 {
   background-color: rgb(34, 87, 65);
   margin-top: 98px;
   float: left;
   margin-left: 10px;
 }
 
-#block-4 {
+.block-4 {
   background-color: rgb(3, 26, 16);
   margin-top: 98px;
 }
@@ -108,7 +102,7 @@ html, body, ul, p {
 /*END COMPARISON*/
 
 /*GRAPH*/
-#line-graph {
+.line-graph {
   background-color: rgb(22, 22, 100);
   float: left;
   margin-top: 300px;
@@ -124,3 +118,28 @@ a:link {text-decoration: none;}
 a:visited {text-decoration: none;}
 a:hover {text-decoration: none; color: rgb(101, 101, 167);}
 a:active {text-decoration: none;}
+
+.background-image img{
+position: center;
+background-size: cover;
+width: 90%;
+height: 100%;
+background-repeat: no-repeat;
+
+}
+
+.text {
+  position: absolute;
+  margin-left: 200px;
+  font-size: 30px;
+  
+}
+
+.container {
+  background-color: red;;
+}
+
+
+
+
+

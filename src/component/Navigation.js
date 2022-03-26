@@ -3,9 +3,10 @@ const Navigation = () => {
         <>
         <div className = "top-nav"></div>
         <div className = "nav">
-            <h1>Weather</h1>
+            
             <body onload="draw()">
                 <canvas id="circle" width="100" height="100"></canvas>
+                <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto"></link>
             </body>
             
         <ul>
@@ -15,7 +16,7 @@ const Navigation = () => {
         </ul>
         </div>
 
-        <canvas id="nav-right" width="100" height="100"></canvas>
+        
         </>
         
     )
