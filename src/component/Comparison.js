@@ -1,114 +1,119 @@
-import React from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
 import "chart.js/auto";
-import {Chart as ChartJS, ArcElement, Tooltip, Legend} from 'chart.js';
-import {Doughnut} from "react-chartjs-2";
-import TableItem from "./TableItem";
-import { useState, useEffect, useRef } from 'react';
-
-ChartJS.register(ArcElement, Tooltip, Legend);
-
-const Comparison = (props) =>{
-
-    const [chartInfo, setChartInfo] = useState ([]);
-    const [knownInfo, setKnownInfo] = useState ([]);
-    const [unknownInfo, setUnknownInfo] = useState ([]);
-    const [showPlanets, setShowPlanets] = useState([]);
-    const linkVal = useRef();
-
-    useEffect(()=> {
-        axios.get("https://api.le-systeme-solaire.net/rest/bodies/");
-        axios.get("https://api.le-systeme-solaire.net/rest/knowncount/")
-        .then((res)=> {
-            let data = res.data;
-
-            let unknown = data.filter((item) => item.unknown === true).length;
-            let known = data.filter((item) => item.known === false).length;
-
-            console.log(unknown);
-            console.log(known)
-            
-            setChartInfo([unknown, known]);
-
-            const unknownData = [];
-            const knownData = [];
+import {Bar, Pie, PolarArea} from "react-chartjs-2";
 
 
-            for(let i = 0; i < data.length; i++) {
-                if (data[i].unkown === false){
-                    knownData.push({
-                        planetName: data[i].name,
-                        
-                    });
-                } else {
-                    unknownData.push({
-                        planetName: data[i].name,  
-                    });
-                }
-            }
+const Comparison = () =>{
 
-            setKnownInfo(knownData);
-            setUnknownInfo(unknownData);
-
-            let startItem = knownData.map((item) => <TableItem id={item.id} frame={item.planetName} /> )
-
-            setShowPlanets(startItem);
-
-        })
-    }, [])
-
-    const knownData = knownData.map((item) => <TableItem id={item.id} frame={item.planetName} /> )
-    const unknownData = unknownData.map((item) => <TableItem id={item.id} frame={item.planetName} /> )
-
-    console.log(knownInfo);
-    console.log(unknownInfo);
-
-    const ChartData = {
-        labels: ['Success', 'Failures'],
+    return (
+        <>
+        <h>Exploring Planets</h>
+        <div className="select">
+            <select>
+                <option value="0">All</option>
+                <option value="1">Known Palnets</option>
+                <option value="2">Unknown Planets</option>
+                
+            </select>
+        </div>
+        <div className="select-results">
+        </div>
+        
+        <div className="bargraph">
+            <Bar data= {{
+        labels: ['La Lune', 'Phobos', 'Callisto', 'Himalia', 'Praxidike', 'Europa'],
         datasets: [{
-            label: 'Success Fail for Launches',
-            data: [12, 19],
+            label: 'Density (g.cm3)',
+            data: [3.34400, 1.90000, 1.83000, 1.00000, 1.00000, 3.01000],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1
-        }]                            
-
-    }
-
-    function updatePlanets() {
-        let getValue = linkVal.current.value;
-        if(getValue === "Failed") {
-            setKnownInfo(knownInfo);
-        } else if (getValue === "Success") {
-            setShowPlanets(unknownInfo);
-        }
-    }
-
-    return (
-        <div>
-            <div className="left-panel"> 
-                <Doughnut data={ChartData} />
-            </div>
-            <div className="right-panel">
-                <h3>Mission Information</h3>
-                <select onChange={updatePlanets} ref={linkVal}>
-                    <option>Failed</option>
-                    <option>Success</option>
-                </select>
-                <div className="container">
-                    {showPlanets}
-                </div>
-            </div>
+        }]
+            }} height={400} width={600} option={{}}
+            />
         </div>
-         
+        <div className="piegraph">
+        <Pie data= {{
+        labels: ['Planet', 'Dwarf Planet', 'Moons Planet', 'Moons Dwarf Planet', 'Moons Asteroid'],
+        datasets: [{
+            label: '# of Votes',
+            data: [8, 5, 206, 9, 558],
+            backgroundColor: [
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(300, 26, 245, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(300, 26, 245, 0.2)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+            }} height={400} width={600} option={{}}
             
-    );
+            />
+            
+        </div>
+        
+      
+        
+        <div className="areachart">
+            <PolarArea data= {{
+        labels: ['La Lune', 'Phobos', 'Callisto', 'Himalia', 'Praxidike', 'Europa'],
+        datasets: [
+            {
+              label: '# of Votes',
+              data: [7.34600, 1.06000, 1.07590, 9.50000, 4.30000, 4.80000],
+              backgroundColor: [
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(300, 26, 245, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(300, 26, 245, 0.2)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+            },
+          ],
+            }} height={400} width={600} option={{}}
+            
+            />
+            
+        </div>
+        
+
+
+
+
+
+        </>
+    )
+    
 }
 
 export default Comparison; 

@@ -1,5 +1,6 @@
 import React from "react";
 import 'chart.js/auto'
+import {Bar, Pie, PolarArea} from "react-chartjs-2";
 
 const Dashboard = () =>{
     return (
@@ -7,7 +8,10 @@ const Dashboard = () =>{
     
         <h>The Solar System</h>
         <div className="block-text">
-            <p>Information about solar system</p>
+            <p>Welcome to The Solar System! Our system is a collection of planets, moons, asteroids, comets,
+            dust and gas which orbits around the star, the Sun. Around 4.6 billion years ago, a giant cloud of dust
+            and gas (solar nebula) collapsed in on itself and began to form the solar system's sun and planets.
+            </p>
         </div>
         <div className="timeline_block">Text</div>
         <div className="bar_block">This is where the bar graph will be</div>
@@ -16,6 +20,62 @@ const Dashboard = () =>{
         <div className="block_text_2">Text</div>
         <div className="block_text_3">Text</div>
         
+        <div className="piegraph-dash">
+            <Pie data= {{
+        labels: ['Planet', 'Dwarf Planet', 'Moons Planet', 'Moons Dwarf Planet', 'Moons Asteroid'],
+        datasets: [{
+            label: '# of Votes',
+            data: [8, 5, 206, 9, 558],
+            backgroundColor: [
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(300, 26, 245, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(300, 26, 245, 0.2)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+            }} height={400} width={600} option={{}}
+            
+            />
+            
+        </div>  
+        <div className="areachart-dash">
+            <PolarArea data= {{
+        labels: ['La Lune', 'Phobos', 'Callisto', 'Himalia', 'Praxidike', 'Europa'],
+        datasets: [
+            {
+              label: '# of Votes',
+              data: [7.34600, 1.06000, 1.07590, 9.50000, 4.30000, 4.80000],
+              backgroundColor: [
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(300, 26, 245, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(300, 26, 245, 0.2)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+            },
+          ],
+            }} height={400} width={600} option={{}}
+            
+            />
+            
+        </div>
         
         </>
         
