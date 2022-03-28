@@ -11,7 +11,6 @@ const Comparison = () =>{
 
     const [graphInfo, setgraphInfo] = useState([]);
     const [timeInfo, settimeInfo] = useState([]);
-    const [showInfo, setFailedInfo] = useState ([]);
    
 
     const labels = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'];
@@ -95,7 +94,7 @@ const Comparison = () =>{
         })
     }, [])
 
-    const showItems = showInfo.filter((item) => <TableItem id)
+    const showItems = showIn
 
     const ChartData = {
         labels: ['moon', 'planet', 'asteroid', 'comet'],
@@ -121,6 +120,7 @@ const Comparison = () =>{
     }
             
     function updatedTime() {
+        let getValue = linkVal.current.value;
         if(getValue === "Failed") {
             settimeInfo(failedItems);
         } else if (getValue === "Success") {
