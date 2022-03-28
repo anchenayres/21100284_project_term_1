@@ -1,8 +1,70 @@
 import React from "react";
 import 'chart.js/auto'
 import {Bar, Pie, PolarArea} from "react-chartjs-2";
+import axios from "axios";
+import { useState, useEffect, useRef } from 'react';
 
 const Dashboard = () =>{
+    const [graphInfo, setgraphInfo] = useState([]);
+    const [timeInfo, settimeInfo] = useState([]);
+
+
+
+
+
+    useEffect(() => {
+        axios.get('https://api.le-systeme-solaire.net/rest/bodies/')
+        .then((res) => {
+            console.log(res);
+            const data = res.data.bodies
+
+            const yearlyDisc = [];
+
+            for (let i = 0; i < data.length; i++) {
+                let date = data[i].discoveryDate;
+                date = date.substring(6);
+              
+
+                if (date === "2010") {
+                    yearlyDisc.push("2010");
+                }
+
+               
+            }
+
+            console.log(yearlyDisc);
+           
+           
+
+          
+
+            const moon = data.filter((item) => item.bodyType === "Moon").length;
+            const planet = data.filter((item) => item.bodyType === "Planet").length;
+            const asteroid = data.filter((item) => item.bodyType === "Asteroid").length;
+            const comet = data.filter((item) => item.bodyType === "Comet").length;
+
+            const ten = yearlyDisc.filter((item) => item === "2010").length;
+
+          console.log(ten);
+
+            setgraphInfo([moon, planet, asteroid, comet]);
+        },[])
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <>
     
@@ -22,10 +84,10 @@ const Dashboard = () =>{
         
         <div className="piegraph-dash">
             <Pie data= {{
-        labels: ['Planet', 'Dwarf Planet', 'Moons Planet', 'Moons Dwarf Planet', 'Moons Asteroid'],
+        labels: ['moon', 'planet', 'asteroid', 'comet'],
         datasets: [{
             label: '# of Votes',
-            data: [8, 5, 206, 9, 558],
+            data: graphInfo,
             backgroundColor: [
                 'rgba(75, 192, 192, 0.2)',
                 'rgba(75, 192, 192, 0.2)',
@@ -49,11 +111,11 @@ const Dashboard = () =>{
         </div>  
         <div className="areachart-dash">
             <PolarArea data= {{
-        labels: ['La Lune', 'Phobos', 'Callisto', 'Himalia', 'Praxidike', 'Europa'],
+        labels: ['moon', 'planet', 'asteroid', 'comet'],
         datasets: [
             {
               label: '# of Votes',
-              data: [7.34600, 1.06000, 1.07590, 9.50000, 4.30000, 4.80000],
+              data: graphInfo,
               backgroundColor: [
                 'rgba(75, 192, 192, 0.2)',
                 'rgba(75, 192, 192, 0.2)',
