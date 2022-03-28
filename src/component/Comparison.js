@@ -11,8 +11,10 @@ const Comparison = () =>{
         <div className="select">
             <select>
                 <option value="0">All</option>
-                <option value="1">Known Palnets</option>
-                <option value="2">Unknown Planets</option>
+                <option value="1">Pie Chart</option>
+                <option value="3">Bar Graph</option>
+                <option value="4">Polar Radar Graph</option>
+                <option value="5">Timeline Graph</option>
                 
             </select>
         </div>
@@ -74,8 +76,6 @@ const Comparison = () =>{
             
         </div>
         
-      
-        
         <div className="areachart">
             <PolarArea data= {{
         labels: ['La Lune', 'Phobos', 'Callisto', 'Himalia', 'Praxidike', 'Europa'],
@@ -105,12 +105,6 @@ const Comparison = () =>{
             />
             
         </div>
-        
-
-
-
-
-
         </>
     )
     

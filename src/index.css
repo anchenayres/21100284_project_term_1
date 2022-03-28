@@ -36,52 +36,58 @@ html, body, p {
   background-color: rgba(2, 2, 2, 0.404);
   height: 200px;
   width: 300px;
+  border-radius: 5vh;
   margin-left: 20vh;
-  margin-top: 15vh;
-  border-radius: 8px;
+  margin-top: 11vh;
+  color: white;
+  font-size: 15px;
 }
 
 .block_text_2 {
   height: 30vh;
   width: 30vh;
-  margin-top: -65vh;
+  margin-top: -63vh;
   margin-left: 105vh;
+  border-radius: 5vh;
   background-color: rgba(2, 2, 2, 0.404);
-  color: pink;
+  color: rgb(190, 10, 40);
 }
 
 .block_text_3 {
   height: 30vh;
   width: 30vh;
-  margin-top: -65vh;
+  border-radius: 5vh;
+  margin-top: -63vh;
   margin-left: 105vh;
   background-color: rgba(2, 2, 2, 0.404);
-  color: pink;
+  color: rgb(161, 116, 245);
 }
 
 .timeline_block {
   height: 30vh;
   width: 80vh;
-  margin-top: 5vh;
+  border-radius: 5vh;
+  margin-top: 2vh;
   margin-left: 20vh;
   background-color: rgba(2, 2, 2, 0.404);
-  color: pink;
 }
 
 .bar_block {
   height: 30vh;
   width: 30vh;
-  margin-top: 5vh;
-  margin-left: 25vh;
+  border-radius: 5vh;
+  margin-top: 3vh;
+  margin-left: 20vh;
   background-color: rgba(2, 2, 2, 0.404);
-  color: pink;
+  color: rgb(230, 185, 40);
 }
 
 .pie_block {
   height: 30vh;
   width: 30vh;
+  border-radius: 5vh;
   margin-top: -30vh;
-  margin-left: 65vh;
+  margin-left: 63vh;
   background-color: rgba(2, 2, 2, 0.404);
   color: pink;
 }
@@ -89,10 +95,11 @@ html, body, p {
 .polar_block {
   height: 30vh;
   width: 30vh;
+  border-radius: 5vh;
   margin-top: -30vh;
   margin-left: 105vh;
   background-color: rgba(2, 2, 2, 0.404);
-  color: pink;
+  color: rgb(133, 241, 82);
 }
 
 p {
@@ -169,6 +176,12 @@ p1 {
   width: 500px;
   float: left;
   margin-top: 30vh;
+}
+
+.dash-line-chart {
+  height: 400px;
+  width: 500px;
+  margin-left: 10vh;
 }
 
 .left-panel {
