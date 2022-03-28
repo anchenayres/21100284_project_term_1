@@ -33,10 +33,6 @@ const Dashboard = () =>{
             }
 
             console.log(yearlyDisc);
-           
-           
-
-          
 
             const moon = data.filter((item) => item.bodyType === "Moon").length;
             const planet = data.filter((item) => item.bodyType === "Planet").length;
@@ -50,20 +46,6 @@ const Dashboard = () =>{
             setgraphInfo([moon, planet, asteroid, comet]);
         },[])
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     return (
         <>

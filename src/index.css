@@ -164,19 +164,24 @@ p1 {
   float: right;
 }
 
+.line_chart {
+  height: 500p;
+  width: 500px;
+  float: left;
+  margin-top: 30vh;
+}
+
 .left-panel {
   width: 40%;
   height: 80vh;
   float: left;
 }
 
-
-
 .tableItem {
   width: 80%;
   height: 55px;
   border-radius: 10px;
-  background-color: blueviolet;
+  background-color: rgb(90, 184, 71);
   margin-top: 10px;
 }
 
@@ -199,11 +204,12 @@ p1 {
 }
 
 .select-results {
-  background-color: bisque;
+  background-color: rgba(119, 255, 192, 0.5);
   height: 30vh;
   width: 60vh;
   margin-left: 20vh;
   margin-top: 5vh;
+  border-radius: 10px;
 }
 
 
