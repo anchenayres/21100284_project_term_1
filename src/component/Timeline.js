@@ -97,20 +97,11 @@ const Timeline = () => {
 
     return (
         <>
-
-
         <h>Discovery Timeline</h>
 
-
-        <select className="select">
-            <option>2010</option>
-            <option>2011</option>
-        </select>
-        <div className="con">
-
-        </div>
         <div className="timeline-timeline-block">
             <div className="timeline-timeline">
+                <h5>Timeline of the Discovered Planets</h5>
                 <Line data = {{
                     labels,
                     datasets: [
@@ -145,6 +136,15 @@ const Timeline = () => {
                 }} 
                 />
             </div>
+            
+        </div>
+
+        <select className="options">
+            <option>2010</option>
+            <option>2011</option>
+        </select>
+        <div className="con2">
+
         </div>
         
 

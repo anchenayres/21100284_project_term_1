@@ -7,7 +7,7 @@ const TableItem = (props) => {
 
         <p>Discovery Name: {props.planeetNaam} </p> 
         <p>Discovery Date: {props.datum} </p>     
-        <p>Dicovery Name: {props.naam} </p>  
+        <p>Dicovered By: {props.naam} </p>  
       </div>
     );
   }

@@ -61,9 +61,10 @@ a {
 .nav a:active {text-decoration: none;}
 
 .block-text {
-  height: 200px;
+  height: 150px;
   width: 750px;
-  background-color: rebeccapurple;
+  background-color: rgba(0, 0, 0, 0.719);
+  border-radius: 5vh;
   margin-left: 20vh;
   margin-top: 11vh;
   color: white;
@@ -79,28 +80,30 @@ a {
 
 
 p2 {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .block_text_2 {
   height: 30vh;
   width: 30vh;
   margin-top: -64vh;
-  margin-left: 105vh;
+  margin-left: 106vh;
   border-radius: 5vh;
-  background-color: rgba(2, 2, 2, 0.80);
   color: rgb(190, 10, 40);
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  background-image: url("/src/images/moon.jpg") ;
+  background-size: cover;
 
 }
 
 .block_text_3 {
-  height: 30vh;
+  height: 29vh;
   width: 30vh;
   border-radius: 5vh;
-  margin-top: -63vh;
-  margin-left: 105vh;
-  background-color: rgba(2, 2, 2, 0.404);
+  margin-top: -62vh;
+  margin-left: 106vh;
+  background-image: url("/src/images/sun.jpg") ;
+  background-size: cover;
   color: rgb(161, 116, 245);
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
 
@@ -128,9 +131,10 @@ p2 {
 
 .bar_block {
   height: 31vh;
-  width: 30vh;
+  width: 40vh;
   border-radius: 5vh;
   margin-top: 3vh;
+  padding-top: 3vh;
   margin-left: 20vh;
   background-color: rgba(2, 2, 2, 0.404);
   color: rgb(230, 185, 40);
@@ -140,22 +144,27 @@ p2 {
 
 .pie_block {
   height: 31vh;
-  width: 30vh;
+  width: 40vh;
   border-radius: 5vh;
   margin-top: -31vh;
   margin-left: 63vh;
   background-color: rgba(2, 2, 2, 0.404);
   color: pink;
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
-
 }
+
+.dash-pie-graph {
+  height: 30vh;
+  width: 30vh;
+  margin-left: 5vh;  
+} 
 
 .polar_block {
   height: 31vh;
   width: 30vh;
   border-radius: 5vh;
   margin-top: -31vh;
-  margin-left: 105vh;
+  margin-left: 106vh;
   background-color: rgba(2, 2, 2, 0.404);
   color: rgb(133, 241, 82);
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
@@ -200,13 +209,7 @@ p1 {
   margin-top: 10vh;
 } 
 
-.piegraph {
-  height: 40vh;
-  width: 40vh;
 
-  margin-top: -60vh;
-  float: right;
-} 
 
 .areachart {
   height: 40vh;
@@ -217,12 +220,6 @@ p1 {
 }
 
 
-.piegraph-dash {
-  height: 40vh;
-  width: 40vh;
-  margin-top: 20vh;
-  float: right;
-} 
 
 .areachart-dash {
   height: 40vh;
@@ -241,9 +238,16 @@ p1 {
 
 .timeline-timeline {
   height: 500px;
-  width: 500px;
+  width: 700px;
   margin-left: 10vh;
-  padding-top: 3vh;
+}
+
+.timeline-timeline-block {
+  height: 400px;
+  width: 1130px;
+  margin-left: 20vh;
+  padding-top: 1vh;
+  padding-left: 10vh;
 }
 
 .dash-line-chart {
@@ -262,10 +266,21 @@ p1 {
 /* COMPARISON */
 
 .con {
-  width: 60vh;
-  height: 46vh;
+  width: 75vh;
+  height: 25vh;
   overflow: scroll;
-  background-color: rgba(212, 65, 65, 0.404);
+  background-color: rgba(0, 0, 0, 0.719);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  margin-top: 3vh;
+  margin-left: 20vh;
+  border-radius: 5vh;
+}
+
+.con2 {
+  width: 75vh;
+  height: 25vh;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.719);
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
   margin-top: 3vh;
   margin-left: 20vh;
@@ -277,19 +292,12 @@ p1 {
   margin-top: 15vh;
 }
 
-.con::-webkit-scrollbar {
-  display: none;
-}
 
-.con {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
 .tableItem {
-  width: 50vh;
+  width: 65vh;
   height: 8vh;
   border-radius: 10px;
-  background-color: rgb(40, 86, 94);
+  background-color: rgba(11, 43, 61, 0.473);
   margin-top: 3vh;
   margin-left: 5vh;
 
@@ -299,66 +307,82 @@ p1 {
   float: left;
   margin-left: 15px;
   margin-top: 5px;
-  color: pink;
+  color: rgb(255, 255, 255);
   background-color: none;
 }
 
-.comp-polar {
-  height: 200px;
-  width: 200px;
+.comp-bar {
+  padding-left: 5vh;
+  padding-top: 1vh;
+  width: 60vh;
+}
+
+.comp-bar-block {
+  height: 400px;
+  width: 75vh;
+  margin-left: 5vh;
+  margin-top: 3vh;
+  border-radius: 5vh;
+  float: left;
+  background-color: rgba(2, 2, 2, 0.404);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
 }
 
 .comp-pie {
-  height: 400px;
-  width: 400px;
-  margin-top: 1vh;
+  height: 300px;
+  width: 300px;
+  margin-top: 2vh;
   margin-left: 4vh;
 }
 
 
 .comp-pie-block {
-  height: 46vh;
-  width: 50vh;
+  height: 42vh;
+  width: 40vh;
   border-radius: 5vh;
   float: right;
-  margin-top: -62vh;
+  margin-top: -42vh;
   margin-right: 5vh;
   background-color: rgba(2, 2, 2, 0.404);
-  color: rgb(161, 116, 245);
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
 }
 
+h5 {
+  color: white;
+  text-align: center;
+  font-size: 5px;
+}
+
 .comp-polar {
-  height: 400px;
-  width: 400px;
-  margin-top: 1vh;
+  height: 300px;
+  width: 300px;
+  margin-top: 5vh;
   margin-left: 4vh;
 }
 
 .comp-polar-block {
-  height: 46vh;
-  width: 50vh;
+  height: 42vh;
+  width: 40vh;
   border-radius: 5vh;
   float: right;
-  margin-top: -13vh;
+  margin-top: 3vh;
   margin-right: 5vh;
+  padding-top: 2vh;
   background-color: rgba(2, 2, 2, 0.404);
   color: rgb(161, 116, 245);
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
 }
 
-.cop-bar {
-  height: 20vh;
-  width: 20vh;
+.options {
+  margin-top: 5vh;
+  margin-left: 5vh;
 }
 
-.comp-bar-block {
-  height: 30vh;
-  width: 80vh;
-  border-radius: 5vh;
-  margin-top: 2vh;
-  margin-left: 20vh;
+.con2 {
   background-color: rgba(2, 2, 2, 0.404);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  width: 120vh;
+  height: 30vh;
 }
+
+
 
