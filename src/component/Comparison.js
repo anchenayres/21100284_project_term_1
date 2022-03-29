@@ -5,15 +5,21 @@ import { useState, useEffect, useRef } from 'react';
 import { Line, Pie, PolarArea } from 'react-chartjs-2';
 import TableItem from "./TableItem";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
 
-const Comparison = () =>{
+
+const Comparison = () => {
 
     const [graphInfo, setgraphInfo] = useState([]);
     const [timeInfo, settimeInfo] = useState([]);
-   
+
+    const [noPlanetInfo, setNoPlanetInfo] = useState([]);
+    const [yesPlanetInfo, setYesPlanetInfo] = useState([]);
+    const [showPlanets, setShowPlanets] = useState([]);
+    const linkVal = useRef();
+    
 
     const labels = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'];
+
 
 
     useEffect(()=> {
@@ -21,9 +27,46 @@ const Comparison = () =>{
         .then((res) => {
             console.log(res);
             const data = res.data.bodies
-           
+
+            let yesPlanet = data.filter((item) => item.isPlanet === true).length;
+            let noPlanet = data.filter((item) => item.isPlanet === false).length;
+            
+            const yesPlanetData = [];
+            const noPlanetData = [];
+    
 
             const yearlyDisc = [];
+            
+           
+
+            for(let i = 0; i < data.length; i++) {
+                if (data[i].isPlanet === false){
+                    noPlanetData.push({
+                        id: data[i].id,
+                        planetTrue: data[i].isPlanet,
+                        discName: data[i].discoveredBy,
+                        discDate: data[i].discoveryDate,
+                    });
+                } else {
+                    yesPlanetData.push({
+                        id: data[i].id,
+                        planetTrue: data[i].isPlanet,
+                        discName: data[i].discoveredBy,
+                        discDate: data[i].discoveryDate,
+                   
+                    });
+                }
+            }
+
+            setNoPlanetInfo(noPlanetData);
+            setYesPlanetInfo(yesPlanetData);
+
+            let startItem = noPlanetData.map((item) => <TableItem id={item.id} datum={item.discDate} naam={item.discName}  />)
+            setShowPlanets(startItem);
+           
+
+
+
 
             for (let i = 0; i < data.length; i++) {
                 let date = data[i].discoveryDate;
@@ -63,7 +106,7 @@ const Comparison = () =>{
                 }
             }
           
-            console.log(yearlyDisc);
+         
 
             const ten = yearlyDisc.filter((item) => item === "2010").length;
             const eleven = yearlyDisc.filter((item) => item === "2011").length;
@@ -77,8 +120,6 @@ const Comparison = () =>{
             const nineteen = yearlyDisc.filter((item) => item === "2018").length;
             const twenty = yearlyDisc.filter((item) => item === "2018").length;
 
-            console.log(ten);
-            console.log(twenty);
 
             settimeInfo([ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty]);
             const moon = data.filter((item) => item.bodyType === "Moon").length;
@@ -94,9 +135,41 @@ const Comparison = () =>{
         })
     }, [])
 
-    const showItems = showIn
+    const noPlanetItems = noPlanetInfo.map((item) => <TableItem id={item.id} datum={item.discDate} naam={item.discName} />)
+    const yesPlanetItems = yesPlanetInfo.map((item) => <TableItem id={item.id} datum={item.discDate} naam={item.discName}  />)
 
-    const ChartData = {
+
+
+    console.log(noPlanetInfo);
+    console.log(yesPlanetInfo);
+    
+    function updatePlanets() {
+        let getValue = linkVal.current.value;
+        if(getValue === "Not Planets") {
+            setShowPlanets(noPlanetItems);
+        } else if (getValue === "Planets") {
+            setShowPlanets(yesPlanetItems);
+        }
+    }
+  
+    return (
+        <>
+        <h>Exploring Planets</h>
+
+        <div className="right-panel">
+                
+                    <select className="select" onchange={updatePlanets} ref={linkVal}>
+                        <option>Planets</option>
+                        <option>Not Planets</option>
+                    </select>
+                    <div className="con">
+                    {showPlanets}
+                    </div>
+                </div>
+                
+        <div className="comp-pie-block">
+        <div className="comp-pie">
+            <Pie data= {{
         labels: ['moon', 'planet', 'asteroid', 'comet'],
         datasets: [{
             label: '# of Votes',
@@ -117,55 +190,14 @@ const Comparison = () =>{
             ],
             borderWidth: 1
         }]
-    }
-            
-    function updatedTime() {
-        let getValue = linkVal.current.value;
-        if(getValue === "Failed") {
-            settimeInfo(failedItems);
-        } else if (getValue === "Success") {
-            settimeInfo(successItems);
-        }
-    }
-            
-
-
-    
-    return (
-        <>
-        <div className="left-panel"> 
-            <Line data={ChartData} />
+            }} height={400} width={600} option={{}}
+            />
         </div>
-    
-
-
-        <h>Exploring Planets</h>
-       
-        <div className="select">
-            <select className="chartType" id="chartTpe" onchange="updateChartType()">
-                <option value="pie">Pie Chart</option>
-                <option value="polar">Polar Radar Graph</option>
-                <option value="line">Timeline Graph</option>
-            </select>
         </div>
 
-        <div className="select-results">
-            <div id="mychart"></div>
-        </div>
-
-    
-
-
-
-
-        
-
-
-        
-        
-        
-        <div className="areachart">
-        <PolarArea data= {{
+        <div className="comp-polar-block">
+        <div className="comp-polar">
+            <PolarArea data= {{
         labels: ['moon', 'planet', 'asteroid', 'comet'],
         datasets: [
             {
@@ -190,43 +222,18 @@ const Comparison = () =>{
           ],
             }} height={400} width={600} option={{}}
             
-            />            
+            />
+            
+        </div>
         </div>
 
+        <div classNmae="comp-bar-block">
+        <div classNmae="comp-bar">
+            <p>fdws</p>
+        </div>
+        </div>
 
-        <Line data = {{
-                    labels,
-                    datasets: [
-                        {
-                        label: ['timeline'],
-                        data: timeInfo,
-                        borderColor: [
-                            'rgb(255, 99, 132)',
-                            'rgb(223, 119, 255)',
-                            'rgb(235, 255, 119)',
-                            'rgb(142, 255, 119)',
-                            'rgb(255, 119, 248)',
-                            'rgb(223, 119, 255)',
-                            'rgb(235, 255, 119)',
-                            'rgb(142, 255, 119)',
-                            'rgb(255, 119, 248)'
-                        ],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.5)',
-                            'rgba(223, 119, 255, 0.5)',
-                            'rgba(235, 255, 119, 0.5)',
-                            'rgba(142, 255, 119, 0.5)',
-                            'rgba(255, 119, 248, 0.5)',
-                            'rgba(223, 119, 255, 0.5)',
-                            'rgba(235, 255, 119, 0.5)',
-                            'rgba(142, 255, 119, 0.5)',
-                            'rgba(255, 119, 248, 0.5)'
-                        ]
-                        
-                        }, 
-                    ],
-                }} 
-                />
+                
         </>
     
     );

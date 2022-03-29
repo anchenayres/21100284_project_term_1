@@ -1,38 +1,15 @@
 import React from "react";
-import { Line } from "react-chartjs-2";
 
 
 const TableItem = (props) => {
-
-
     return (
-        <>
-       <div className="tableItem" key={props.data}>
-          <img src={props.imgUrl} />   
-          <p>Flight Name: {props.fname}</p>     
-          <p>Flight Number: {props.fnum}</p>  
-          <p><a target="_blank" href={newLink}>Watch the Launch</a></p>
+      <div className="tableItem" key={props.id}>
+
+        <p>Discovery Name: {props.planeetNaam} </p> 
+        <p>Discovery Date: {props.datum} </p>     
+        <p>Dicovery Name: {props.naam} </p>  
       </div>
-       
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        </>          
-      
     );
   }
-
-  export default TableItem;
-
-
-
   
- 
+  export default TableItem;

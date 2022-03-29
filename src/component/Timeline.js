@@ -5,24 +5,33 @@ import { useState, useEffect, useRef } from 'react';
 import { Line } from 'react-chartjs-2';
 
 
+
 const Timeline = () => {
     const [timeInfo, settimeInfo] = useState([]);
 
     const labels = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'];
+    
+
 
     useEffect(() => {
+
+        const yearlyDisc = [];
+
+   
+            
         axios.get('https://api.le-systeme-solaire.net/rest/bodies/')
         .then((res) => {
             console.log(res);
             const data = res.data.bodies
 
-            const yearlyDisc = [];
+         
+
+
 
             for (let i = 0; i < data.length; i++) {
                 let date = data[i].discoveryDate;
                 date = date.substring(6);
-                if (date === "2010") {
-                    yearlyDisc.push("2010");  
+                if (date === "2010") {  
                 }
                 if (date === "2011") {
                     yearlyDisc.push("2011");  
@@ -55,7 +64,13 @@ const Timeline = () => {
                     yearlyDisc.push("2020");  
                 }
             }
-          
+
+            
+
+
+
+        
+
             console.log(yearlyDisc);
 
             const ten = yearlyDisc.filter((item) => item === "2010").length;
@@ -78,14 +93,29 @@ const Timeline = () => {
         })
     },[])
 
+  
+
     return (
         <>
-            <div className="line_chart">
+
+
+        <h>Discovery Timeline</h>
+
+
+        <select className="select">
+            <option>2010</option>
+            <option>2011</option>
+        </select>
+        <div className="con">
+
+        </div>
+        <div className="timeline-timeline-block">
+            <div className="timeline-timeline">
                 <Line data = {{
                     labels,
                     datasets: [
                         {
-                        label: ['timeline'],
+                        label: ['Discovered Planets Over Ten Years'],
                         data: timeInfo,
                         borderColor: [
                             'rgb(255, 99, 132)',
@@ -115,6 +145,9 @@ const Timeline = () => {
                 }} 
                 />
             </div>
+        </div>
+        
+
         </>
     )
 };

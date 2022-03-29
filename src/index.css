@@ -1,56 +1,97 @@
-html, body, p {
+html, p {
   margin: 0;
-  padding: 0;
-  background-image: url("/src/images/stars.jpg");
+  padding: 0; 
+
+}
+
+body {
+  background-image: url("/src/images/space.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .top-nav { 
   height: 30px;
   width: 100%;
-  background-color: rgba(2, 2, 2, 0.404);
+  background-color: rgba(0, 0, 0, 0.719);
+
 }
 .nav {
-  background-color: rgb(0, 0, 0);
-  width: 15vh;
+   width: 15vh;
   height: 100%;
-  padding-right: 0;
-  margin-right: 0;
   padding-top: 50vh;
   float: left;
-  height: 100vh;
   color: rgb(255, 255, 255);
-  background-color: rgba(2, 2, 2, 0.404);
+  background-color: rgba(0, 0, 0, 0.719);
+
 }
 
 .nav a, ul {
   color: rgb(255, 255, 255);
   list-style-type: none;
+  line-height: 5vh;
+  text-align: center;
+  margin-left: -5px;
 }
 
-.nav a:link {text-decoration: none;}
+a {
+
+  line-height: 5vh;
+  text-decoration: none;
+  border-radius: 5px;
+
+  border: solid;
+  border-color:rgb(90, 89, 89);
+
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.nav a:link {text-decoration: none; line-height: 5vh;}
 .nav a:visited {text-decoration: none;}
-.nav a:hover {text-decoration: none; color: white; background-color: rgb(108, 128, 18); border-radius: 5px;}
+.nav a:hover {text-decoration: none; color: white; background-color: rgba(124, 121, 121, 0.452);
+  border-radius: 5px; line-height: 5vh; box-shadow: 0px 5px 20px rgba(6, 238, 255, 0.4);
+  transform: translateY(-7px);}
 .nav a:active {text-decoration: none;}
 
 .block-text {
-  background-color: rgba(2, 2, 2, 0.404);
   height: 200px;
-  width: 300px;
-  border-radius: 5vh;
+  width: 750px;
+  background-color: rebeccapurple;
   margin-left: 20vh;
   margin-top: 11vh;
   color: white;
-  font-size: 15px;
+  font-size: 12px;
+  text-align:start;
+  padding-left: 15px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 3vh;
+  
+}
+
+
+
+p2 {
+  font-size: 20px;
 }
 
 .block_text_2 {
   height: 30vh;
   width: 30vh;
-  margin-top: -63vh;
+  margin-top: -64vh;
   margin-left: 105vh;
   border-radius: 5vh;
-  background-color: rgba(2, 2, 2, 0.404);
+  background-color: rgba(2, 2, 2, 0.80);
   color: rgb(190, 10, 40);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+
 }
 
 .block_text_3 {
@@ -61,6 +102,8 @@ html, body, p {
   margin-left: 105vh;
   background-color: rgba(2, 2, 2, 0.404);
   color: rgb(161, 116, 245);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+
 }
 
 .timeline_block {
@@ -69,37 +112,54 @@ html, body, p {
   border-radius: 5vh;
   margin-top: 2vh;
   margin-left: 20vh;
+  background-color: rgba(2, 2, 2, 0.80);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+}
+
+.timeline-timeline-block {
+  height: 35vh;
+  width: 80vh;
+  border-radius: 5vh;
+  margin-top: 15vh;
+  margin-left: 20vh;
   background-color: rgba(2, 2, 2, 0.404);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
 }
 
 .bar_block {
-  height: 30vh;
+  height: 31vh;
   width: 30vh;
   border-radius: 5vh;
   margin-top: 3vh;
   margin-left: 20vh;
   background-color: rgba(2, 2, 2, 0.404);
   color: rgb(230, 185, 40);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+
 }
 
 .pie_block {
-  height: 30vh;
+  height: 31vh;
   width: 30vh;
   border-radius: 5vh;
-  margin-top: -30vh;
+  margin-top: -31vh;
   margin-left: 63vh;
   background-color: rgba(2, 2, 2, 0.404);
   color: pink;
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+
 }
 
 .polar_block {
-  height: 30vh;
+  height: 31vh;
   width: 30vh;
   border-radius: 5vh;
-  margin-top: -30vh;
+  margin-top: -31vh;
   margin-left: 105vh;
   background-color: rgba(2, 2, 2, 0.404);
   color: rgb(133, 241, 82);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+
 }
 
 p {
@@ -129,6 +189,7 @@ p1 {
   font-size: 20px;
   margin-left: 10px;
 }
+
 
 /* GRAPHS */
 
@@ -178,6 +239,13 @@ p1 {
   margin-top: 30vh;
 }
 
+.timeline-timeline {
+  height: 500px;
+  width: 500px;
+  margin-left: 10vh;
+  padding-top: 3vh;
+}
+
 .dash-line-chart {
   height: 400px;
   width: 500px;
@@ -188,45 +256,109 @@ p1 {
   width: 40%;
   height: 80vh;
   float: left;
+  background-color: aliceblue;
 }
 
+/* COMPARISON */
+
+.con {
+  width: 60vh;
+  height: 46vh;
+  overflow: scroll;
+  background-color: rgba(212, 65, 65, 0.404);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  margin-top: 3vh;
+  margin-left: 20vh;
+  border-radius: 5vh;
+}
+
+.select {
+  margin-left: -60vh;
+  margin-top: 15vh;
+}
+
+.con::-webkit-scrollbar {
+  display: none;
+}
+
+.con {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 .tableItem {
-  width: 80%;
-  height: 55px;
+  width: 50vh;
+  height: 8vh;
   border-radius: 10px;
-  background-color: rgb(90, 184, 71);
-  margin-top: 10px;
+  background-color: rgb(40, 86, 94);
+  margin-top: 3vh;
+  margin-left: 5vh;
+
 }
 
 .tableItem p{
   float: left;
   margin-left: 15px;
+  margin-top: 5px;
+  color: pink;
+  background-color: none;
 }
 
-.tableItem img{
-  float: left;
-  margin-left: 25px;
-  width: 45px;
-  height: 45px;
+.comp-polar {
+  height: 200px;
+  width: 200px;
 }
 
-.select {
-  margin-left: 20vh;
-  margin-top: 15vh;
-  
+.comp-pie {
+  height: 400px;
+  width: 400px;
+  margin-top: 1vh;
+  margin-left: 4vh;
 }
 
-.select-results {
-  background-color: rgba(119, 255, 192, 0.5);
+
+.comp-pie-block {
+  height: 46vh;
+  width: 50vh;
+  border-radius: 5vh;
+  float: right;
+  margin-top: -62vh;
+  margin-right: 5vh;
+  background-color: rgba(2, 2, 2, 0.404);
+  color: rgb(161, 116, 245);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+}
+
+.comp-polar {
+  height: 400px;
+  width: 400px;
+  margin-top: 1vh;
+  margin-left: 4vh;
+}
+
+.comp-polar-block {
+  height: 46vh;
+  width: 50vh;
+  border-radius: 5vh;
+  float: right;
+  margin-top: -13vh;
+  margin-right: 5vh;
+  background-color: rgba(2, 2, 2, 0.404);
+  color: rgb(161, 116, 245);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+}
+
+.cop-bar {
+  height: 20vh;
+  width: 20vh;
+}
+
+.comp-bar-block {
   height: 30vh;
-  width: 60vh;
+  width: 80vh;
+  border-radius: 5vh;
+  margin-top: 2vh;
   margin-left: 20vh;
-  margin-top: 5vh;
-  border-radius: 10px;
+  background-color: rgba(2, 2, 2, 0.404);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
 }
-
-
-
-
-
 
