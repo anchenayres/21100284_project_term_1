@@ -142,6 +142,10 @@ p2 {
 
 }
 
+.dash-bar {
+  margin-top: -2vh;
+}
+
 .pie_block {
   height: 31vh;
   width: 40vh;
