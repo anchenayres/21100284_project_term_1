@@ -9,16 +9,8 @@ import TableItem from "./TableItem";
 
 const Comparison = () => {
 
-    const [graphInfo, setgraphInfo] = useState([]);
-    const [timeInfo, settimeInfo] = useState([]);
-
-    const [noPlanetInfo, setNoPlanetInfo] = useState([]);
-    const [yesPlanetInfo, setYesPlanetInfo] = useState([]);
-    const [showPlanets, setShowPlanets] = useState([]);
-    const linkVal = useRef();
     
-
-    const labels = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'];
+    const [planetInfo, setPlanetInfo] = useState([]);
 
 
 
@@ -28,187 +20,115 @@ const Comparison = () => {
             console.log(res);
             const data = res.data.bodies
 
-            let yesPlanet = data.filter((item) => item.isPlanet === true).length;
-            let noPlanet = data.filter((item) => item.isPlanet === false).length;
-            
-            const yesPlanetData = [];
-            const noPlanetData = [];
-    
+            let planet = data.filter((item) => item.isPlanet === true)
 
-            const yearlyDisc = [];
-            
-           
+            setPlanetInfo(planet)
 
-            for(let i = 0; i < data.length; i++) {
-                if (data[i].isPlanet === false){
-                    noPlanetData.push({
-                        id: data[i].id,
-                        planetTrue: data[i].isPlanet,
-                        discName: data[i].discoveredBy,
-                        discDate: data[i].discoveryDate,
-                    });
-                } else {
-                    yesPlanetData.push({
-                        id: data[i].id,
-                        planetTrue: data[i].isPlanet,
-                        discName: data[i].discoveredBy,
-                        discDate: data[i].discoveryDate,
-                   
-                    });
-                }
-            }
-
-            setNoPlanetInfo(noPlanetData);
-            setYesPlanetInfo(yesPlanetData);
-
-            let startItem = noPlanetData.map((item) => <TableItem id={item.id} datum={item.discDate} naam={item.discName}  />)
-            setShowPlanets(startItem);
-           
-
-
-
-
-            for (let i = 0; i < data.length; i++) {
-                let date = data[i].discoveryDate;
-                date = date.substring(6);
-                if (date === "2010") {
-                    yearlyDisc.push("2010");  
-                }
-                if (date === "2011") {
-                    yearlyDisc.push("2011");  
-                }
-                if (date === "2012") {
-                    yearlyDisc.push("2012");  
-                }
-                if (date === "2013") {
-                    yearlyDisc.push("2013");  
-                }
-                if (date === "2014") {
-                    yearlyDisc.push("2014");  
-                }
-                if (date === "2015") {
-                    yearlyDisc.push("2015");  
-                }
-                if (date === "2016") {
-                    yearlyDisc.push("2016");  
-                }
-                if (date === "2017") {
-                    yearlyDisc.push("2017");  
-                }
-                if (date === "2018") {
-                    yearlyDisc.push("2018");  
-                }
-                if (date === "2019") {
-                    yearlyDisc.push("2019");  
-                }
-                if (date === "2020") {
-                    yearlyDisc.push("2020");  
-                }
-            }
-          
-         
-
-            const ten = yearlyDisc.filter((item) => item === "2010").length;
-            const eleven = yearlyDisc.filter((item) => item === "2011").length;
-            const twelve = yearlyDisc.filter((item) => item === "2012").length;
-            const thirteen = yearlyDisc.filter((item) => item === "2013").length;
-            const fourteen = yearlyDisc.filter((item) => item === "2014").length;
-            const fifteen = yearlyDisc.filter((item) => item === "2015").length;
-            const sixteen = yearlyDisc.filter((item) => item === "2016").length;
-            const seventeen = yearlyDisc.filter((item) => item === "2017").length;
-            const eighteen = yearlyDisc.filter((item) => item === "2018").length;
-            const nineteen = yearlyDisc.filter((item) => item === "2018").length;
-            const twenty = yearlyDisc.filter((item) => item === "2018").length;
-
-
-            settimeInfo([ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty]);
-            const moon = data.filter((item) => item.bodyType === "Moon").length;
-            const planet = data.filter((item) => item.bodyType === "Planet").length;
-            const asteroid = data.filter((item) => item.bodyType === "Asteroid").length;
-            const comet = data.filter((item) => item.bodyType === "Comet").length;
-
-            setgraphInfo([moon, planet, asteroid, comet]);
-
-            
-
-            
+            console.log(planet);
         })
     }, [])
 
-    const noPlanetItems = noPlanetInfo.map((item) => <TableItem id={item.id} datum={item.discDate} naam={item.discName} />)
-    const yesPlanetItems = yesPlanetInfo.map((item) => <TableItem id={item.id} datum={item.discDate} naam={item.discName}  />)
+    const [planetOneInfo, setPlanetOneInfo] = useState([]);
+    const [planetOneName, setPlanetOneName] = useState([]);
+    const [planetTwoName, setPlanetTwoName] = useState([]);
 
-
-
-    console.log(noPlanetInfo);
-    console.log(yesPlanetInfo);
-    
-    function updatePlanets() {
-        let getValue = linkVal.current.value;
-        if(getValue === "Not Planets") {
-            setShowPlanets(noPlanetItems);
-        } else if (getValue === "Planets") {
-            setShowPlanets(yesPlanetItems);
-        }
+    let selectedPlanetOne = useRef();
+    const getPlanetOne = () => {
+        let planetOneName = selectedPlanetOne.current.value;
+        setPlanetOneInfo(planetInfo.filter((item) => item.englishName == planetOneName))
+        setPlanetOneName(planetOneName);
     }
+  
+    const [planetTwoInfo, setPlanetTwoInfo] = useState([]);
+
+    let selectedPlanetTwo = useRef();
+    const getPlanetTwo = () => {
+        let planetTwoName = selectedPlanetTwo.current.value;
+        setPlanetTwoInfo(planetInfo.filter((item) => item.englishName == planetTwoName))
+        setPlanetTwoName(planetTwoName);
+
+    }
+
+    const [chartData, setChartData] = useState([]);
+    let selectedStat = useRef();
+    const getStats = () => {
+        let stat = selectedStat.current.value;
+        let planetOneStatValue = planetOneInfo[0][stat];
+        let planetTwoStatValue = planetTwoInfo[0][stat];
+        setChartData([planetOneStatValue, planetTwoStatValue]);
+        console.log(planetOneStatValue);
+    }
+
+    const chartInfo = {
+        labels: ['moon', 'planet', 'asteroid', 'comet'],
+        datasets: [{
+            label: '# of Votes',
+            data: chartData,
+            backgroundColor: [
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(300, 26, 245, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(300, 26, 245, 0.2)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+            } 
+
+
   
     return (
         <>
         <h>Exploring Planets</h>
 
-        <div className="right-panel">
                 
-                    <select className="select" onchange={updatePlanets} ref={linkVal}>
-                        <option>Planets</option>
-                        <option>Not Planets</option>
+                    <select className="select" onChange={getPlanetOne} ref={selectedPlanetOne}>
+                        <option>Choose Planets</option>
+                        {
+                            planetInfo.map(item => <option value={item.name}>{item.englishName}</option>)
+                        }
                     </select>
-                    <div className="con">
-                    {showPlanets}
-                    </div>
-                </div>
+
+                    <select className="select" onChange={getPlanetTwo} ref={selectedPlanetTwo}>
+                        <option>Choose Planets</option>
+                        {
+                            planetInfo.map(item => <option value={item.name}>{item.englishName}</option>)
+                        }
+                    </select>
+
+                    <select className="select" onChange={getStats} ref={selectedStat}>
+                        <option>Choose stats to compare</option>
+                        <option value="avgTemp">Average Temp</option>
+                        <option value="density">Density</option>
+                        <option value="equaRadius">Equatorial Radius</option>
+                        <option value="polarRadius">Polar Radius</option>
+                        <option value="gravity">Gravity</option>
+                        
+                    </select>
 
                 
+
+               
                 <div className="comp-bar-block">
                 <div className="comp-bar">
-                <h5>Bar Chart Discovery Total</h5>
-            <Bar data= {{
-        labels: ['Gauteng', 'Freestate', 'Limpopo', 'Eastern Cape', 'Kwazulu-Natal', 'Northern Cape'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    }} height={400} width={600} option={{}}
-            
-            />
-            
+                <Bar data={chartInfo} />
         </div>
         </div>
                 
         <div className="comp-pie-block">
         <div className="comp-pie">
-            <h5>Pie Chart Discovery Total</h5>
-            <Pie data= {{
+        <Pie data= {{
         labels: ['moon', 'planet', 'asteroid', 'comet'],
         datasets: [{
             label: '# of Votes',
-            data: graphInfo,
+            data: chartData,
             backgroundColor: [
                 'rgba(75, 192, 192, 0.2)',
                 'rgba(75, 192, 192, 0.2)',
@@ -231,15 +151,12 @@ const Comparison = () => {
         </div>
 
         <div className="comp-polar-block">
-        <h5>Polar Radar Chart Discovery Total</h5>
-        <div className="comp-polar">
-            <PolarArea data= {{
+        <PolarArea data= {{
         labels: ['moon', 'planet', 'asteroid', 'comet'],
-        datasets: [
-            {
-              label: '# of Votes',
-              data: graphInfo,
-              backgroundColor: [
+        datasets: [{
+            label: '# of Votes',
+            data: chartData,
+            backgroundColor: [
                 'rgba(75, 192, 192, 0.2)',
                 'rgba(75, 192, 192, 0.2)',
                 'rgba(153, 102, 255, 0.2)',
@@ -254,20 +171,13 @@ const Comparison = () => {
                 'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1
-            },
-          ],
+        }]
             }} height={400} width={600} option={{}}
-            
             />
-            
+        <div className="comp-polar">
         </div>
         </div>
 
-        <div classNmae="comp-bar-block">
-        <div classNmae="comp-bar">
-       
-        </div>
-        </div>
 
                 
         </>

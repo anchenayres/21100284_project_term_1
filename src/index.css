@@ -223,8 +223,6 @@ p1 {
   float: right;
 }
 
-
-
 .areachart-dash {
   height: 40vh;
   width: 40vh;
@@ -289,11 +287,6 @@ p1 {
   margin-top: 3vh;
   margin-left: 20vh;
   border-radius: 5vh;
-}
-
-.select {
-  margin-left: -60vh;
-  margin-top: 15vh;
 }
 
 
@@ -377,15 +370,16 @@ h5 {
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
 }
 
-.options {
-  margin-top: 5vh;
-  margin-left: 5vh;
-}
-
 .con2 {
   background-color: rgba(2, 2, 2, 0.404);
   width: 120vh;
   height: 30vh;
+}
+
+
+
+select option {
+  background-color: red !important;
 }
 
 
