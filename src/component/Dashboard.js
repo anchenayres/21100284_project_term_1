@@ -89,7 +89,7 @@ const Dashboard = () =>{
       
         <h>The Solar System</h>
    
-        <div className="block-text"><p2>Welcome to The Solar System! Our system is a collection of planets, moons, asteroids, comets,
+        <div className="block-text"><p2>Welcome back to the SOLAR SYSTEM! Our system is a collection of planets, moons, asteroids, comets,
             dust and gas which orbits around the star, the Sun. Around 4.6 billion years ago, a giant cloud of dust
             and gas (solar nebula) collapsed in on itself and began to form the solar system's sun and planets.</p2></div>
         <div className="timeline_block">
@@ -220,7 +220,6 @@ const Dashboard = () =>{
         </div>
         </div>
         <div className="block_text_2">Text</div>
-        <div className="block_text_3">Text</div>
         </>
     );
 }

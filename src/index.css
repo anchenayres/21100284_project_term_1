@@ -1,22 +1,32 @@
 html, p, body {
   margin: 0;
   padding: 0; 
+  background-color: black;
+}
 
+.App {
+  background-color: rgb(0, 0, 0);
 }
 
 .top-nav { 
   height: 30px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.719);
+  background-color: rgb(121, 166, 185);
+  border-radius: 15px;
+  margin-top: 2vh;
+  margin-left: 2vh;
+  
 
 }
 .nav {
-   width: 15vh;
-  height: 100%;
+  width: 15vh;
+  height: 130vh;
   padding-top: 50vh;
   float: left;
-  color: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.719);
+  background-color: rgb(121, 166, 185);
+  border-radius: 15px;
+  margin-top: 1vh;
+  margin-left: 2vh;
 
 }
 
@@ -33,7 +43,7 @@ a {
   line-height: 5vh;
   text-decoration: none;
   border-radius: 5px;
-
+  
   border: solid;
   border-color:rgb(90, 89, 89);
 
@@ -54,10 +64,12 @@ a {
   transform: translateY(-7px);}
 .nav a:active {text-decoration: none;}
 
+
+/* DASHBOARD */
 .block-text {
   height: 150px;
   width: 750px;
-  background-color: rgba(0, 0, 0, 0.719);
+  background-color: rgba(223, 255, 252, 0.719);
   border-radius: 5vh;
   margin-left: 20vh;
   margin-top: 11vh;
@@ -71,8 +83,6 @@ a {
   
 }
 
-
-
 p2 {
   font-size: 15px;
 }
@@ -80,26 +90,13 @@ p2 {
 .block_text_2 {
   height: 30vh;
   width: 30vh;
-  margin-top: -64vh;
-  margin-left: 106vh;
+  margin-top: -90vh;
+  margin-left: 158vh;
   border-radius: 5vh;
   color: rgb(190, 10, 40);
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
   background-image: url("/src/images/moon.jpg") ;
   background-size: cover;
-
-}
-
-.block_text_3 {
-  height: 29vh;
-  width: 30vh;
-  border-radius: 5vh;
-  margin-top: -62vh;
-  margin-left: 106vh;
-  background-image: url("/src/images/sun.jpg") ;
-  background-size: cover;
-  color: rgb(161, 116, 245);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
 
 }
 
@@ -121,6 +118,17 @@ p2 {
   margin-left: 20vh;
   background-color: rgba(2, 2, 2, 0.404);
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+}
+
+.polar_block {
+  height: 31vh;
+  width: 30vh;
+  border-radius: 5vh;
+  margin-top: -31vh;
+  margin-left: 158vh;
+  background-color: rgba(2, 2, 2, 0.404);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+
 }
 
 .bar_block {
@@ -157,17 +165,7 @@ p2 {
   margin-left: 5vh;  
 } 
 
-.polar_block {
-  height: 31vh;
-  width: 30vh;
-  border-radius: 5vh;
-  margin-top: -31vh;
-  margin-left: 106vh;
-  background-color: rgba(2, 2, 2, 0.404);
-  color: rgb(133, 241, 82);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
 
-}
 
 p {
   color: white;
@@ -177,9 +175,14 @@ p {
 h{
   margin-top: 0;
   float: left;
-  font-size: 80px;
-  margin-left: 5vh;
-  color: rgba(255, 255, 255, 0.555);
+  font-size: 60px;
+  margin-left: -2vh;
+  margin-top: 1vh;
+  padding-left: 5vh;
+  padding-right: 2vh;
+  color: rgba(255, 255, 255);
+  background-color: rgb(121, 166, 185);
+  border-radius: 10px;
 }
 
 h2 {
@@ -283,57 +286,36 @@ p1 {
   border-radius: 5vh;
 }
 
-
-.tableItem {
-  width: 65vh;
-  height: 8vh;
-  border-radius: 10px;
-  background-color: rgba(11, 43, 61, 0.473);
-  margin-top: 3vh;
-  margin-left: 5vh;
-
-}
-
-.tableItem p{
-  float: left;
-  margin-left: 15px;
-  margin-top: 5px;
-  color: rgb(255, 255, 255);
-  background-color: none;
-}
-
 .comp-bar {
   padding-left: 5vh;
-  padding-top: 1vh;
+  padding-top: vh;
   width: 60vh;
 }
 
 .comp-bar-block {
   height: 400px;
-  width: 75vh;
-  margin-left: 5vh;
+  width: 67vh;
+  margin-left: 70vh;
   margin-top: 3vh;
   border-radius: 5vh;
-  float: left;
   background-color: rgba(2, 2, 2, 0.404);
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
 }
 
 .comp-pie {
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   margin-top: 2vh;
-  margin-left: 4vh;
+  margin-left: 3vh;
 }
 
 
 .comp-pie-block {
-  height: 42vh;
+  height: 40vh;
   width: 40vh;
   border-radius: 5vh;
-  float: right;
   margin-top: -42vh;
-  margin-right: 5vh;
+  margin-left: 142vh;
   background-color: rgba(2, 2, 2, 0.404);
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
 }
@@ -345,20 +327,19 @@ h5 {
 }
 
 .comp-polar {
-  height: 300px;
-  width: 300px;
-  margin-top: 5vh;
-  margin-left: 4vh;
+  width: 35vh;
+  width: 305h;
+  margin-left: 2vh;
+  margin-top: 2vh;
 }
 
 .comp-polar-block {
-  height: 42vh;
+  height: 40vh;
   width: 40vh;
   border-radius: 5vh;
-  float: right;
-  margin-top: 3vh;
-  margin-right: 5vh;
-  padding-top: 2vh;
+  margin-top: -40vh;
+  margin-left: 25vh;
+  padding-top: 1vh;
   background-color: rgba(2, 2, 2, 0.404);
   color: rgb(161, 116, 245);
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
@@ -370,15 +351,130 @@ h5 {
   height: 30vh;
 }
 
-
-
 select  {
   background-color: rgb(79, 116, 128) !important;
   border-radius: 5px;
   border-style: none;
   color: white;
+  margin-top: 5vh !important;
+  margin-left: 32vh !important;
 }
 
+.comp_img {
+  height: 25vh;
+  width: 130vh;
+  margin-top: 20vh;
+  margin-left: 40vh;
+}
+
+.comp_image1 {
+  height: 25vh;
+  width: 25vh;
+  margin-top: 10vh;
+  border-radius: 5vh;
+  color: rgb(190, 10, 40);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  background-image: url("/src/images/uranus.avif");
+  background-size: cover;
+}
+
+.comp_image2 {
+  height:25vh;
+  width: 25vh;
+  margin-left: 35vh;
+  margin-top: -25vh;
+  border-radius: 5vh;
+  color: rgb(190, 10, 40);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  background-image: url("/src/images/neptune.jpg") ;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.comp_image3 {
+  height: 25vh;
+  width: 25vh;
+  margin-left: 70vh;
+  margin-top: -25vh;
+  border-radius: 5vh;
+  color: rgb(190, 10, 40);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  background-image: url("/src/images/jupiter.jpeg") ;
+  background-size: cover;
+}
+
+.comp_image4 {
+  height: 25vh;
+  width: 25vh;
+  margin-left: 105vh;
+  margin-top: -25vh;
+  border-radius: 5vh;
+  color: rgb(190, 10, 40);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  background-image: url("/src/images/mars.jpeg") ;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.comp_img2 {
+  height: 25vh;
+  width: 130vh;
+  margin-left: 40vh;
+}
+
+.comp_image5 {
+  height: 25vh;
+  width: 25vh;
+  margin-top: 10vh;
+  border-radius: 5vh;
+  color: rgb(251, 196, 65);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  background-image: url("/src/images/moon.jpg") ;
+  background-size: cover;
+}
+
+.comp_image6 {
+  height:25vh;
+  width: 25vh;
+  margin-left: 35vh;
+  margin-top: -25vh;
+  border-radius: 5vh;
+  color: rgb(190, 10, 40);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  background-image: url("/src/images/saturn.jpeg") ;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.comp_image7 {
+  height: 25vh;
+  width: 25vh;
+  margin-left: 70vh;
+  margin-top: -25vh;
+  border-radius: 5vh;
+  color: rgb(190, 10, 40);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  background-image: url("/src/images/earth.jpeg") ;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.comp_image8 {
+  height: 25vh;
+  width: 25vh;
+  margin-left: 105vh;
+  margin-top: -25vh;
+  border-radius: 5vh;
+  color: rgb(190, 10, 40);
+  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  background-image: url("/src/images/venus.jpeg") ;
+  background-size: cover;
+  background-position: center;
+}
 
 
 
