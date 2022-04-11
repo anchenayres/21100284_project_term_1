@@ -1,13 +1,7 @@
-html, p {
+html, p, body {
   margin: 0;
   padding: 0; 
 
-}
-
-body {
-  background-image: url("/src/images/space.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .top-nav { 
@@ -378,9 +372,13 @@ h5 {
 
 
 
-select option {
-  background-color: red !important;
+select  {
+  background-color: rgb(79, 116, 128) !important;
+  border-radius: 5px;
+  border-style: none;
+  color: white;
 }
+
 
 
 
