@@ -117,7 +117,7 @@ Run the following in the command-line to install all the required dependencies:
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
 ![image2](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/prototype1.png)
 
-### All The Latest Space X Data! 
+### All The Latest Solar System Data! 
 
 Usding the Solar System API, we have collected and collated all the most relevant Solar System data into once seemless react experience!
 
@@ -126,7 +126,7 @@ Usding the Solar System API, we have collected and collated all the most relevan
 
 Description of Feature
 
-![image4][image4]
+![image4](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/prototype3.png)
 ### Feature 3
 
 Description of Feature
