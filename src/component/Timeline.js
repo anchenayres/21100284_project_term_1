@@ -138,7 +138,25 @@ const Timeline = () => {
 
     return (
         <>
-        <h>Discovery Timeline</h>
+        <div className="astro-1">
+        </div>
+        <p3>The Big Bang</p3>
+        <div className="nav-icons1">
+        </div>
+        <div className="nav-icons2">
+        </div>
+        <div className="nav-icons3">
+        </div>
+        <div className="rocket">
+        </div>
+
+      
+   
+        <div className="block-text"><h4>Welcome back!</h4>
+        <p2>Here you will find all your conseded data which you have <br></br>
+        been looking for on The Big Bang platform in the react project. <br></br>
+        Feel free to explore! </p2>
+        </div>
 
         <select className="select" onChange={getStats} ref={selectedStat}>
                         <option>Choose stats to compare</option>

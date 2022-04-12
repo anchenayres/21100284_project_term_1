@@ -97,12 +97,20 @@ const Dashboard = () =>{
         </div>
         <div className="nav-icons3">
         </div>
+        <div className="rocket">
+        </div>
+
       
    
-        <div className="block-text"><p2><h4>Welcome back!</h4>Here you will find all your conseded data which you have 
-        been looking for on The Big Bang platform in the react project. Feel free to explore! </p2></div>
+        <div className="block-text"><h4>Welcome back!</h4>
+        <p2>Here you will find all your conseded data which you have <br></br>
+        been looking for on The Big Bang platform in the react project. <br></br>
+        Feel free to explore! </p2>
+        </div>
+
         <div className="timeline_block">
-            
+        <h6>Discoveries made throughout the years</h6>
+
         <div className="dash-line-chart">
                 <Line data = {{
                     labels,

@@ -113,44 +113,54 @@ a {
 
 /* DASHBOARD */
 .block-text {
-  height: 150px;
+  height: 260px;
   width: 750px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(19, 19, 19);
   border-radius: 15px;
   margin-left: 25vh;
-  margin-top: 1vh;
+  margin-top: 5vh;
   color: white;
   font-size: 12px;
   text-align:start;
-  padding-left: 15px;
+  padding-left: 30px;
   padding-right: 10px;
   padding-bottom: 10px;
-  padding-top: 3vh;
-  
+  padding-top:7vh;
+
+}
+
+h4 {
+  color: white;
 }
 
 p2 {
   font-size: 15px;
 }
 
-.block_text_2 {
-  height: 20vh;
-  width: 20vh;
-  margin-top: -82vh;
-  margin-left: 724px;
-  border-radius: 30vh;
-  background-image: url("/src/images/astro4.jpeg") ;
+.rocket {
+  height: 45vh;
+  width: 45vh;
+  margin-left: 68vh;
+  margin-top: -6vh;
+  background-image: url("/src/images/manmoon2.png") ;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: -7vh;
+  position: absolute;
+}
+
+
+h6 {
+  color: rgb(253, 252, 252);
+  padding-top: 2vh;
+  margin-left: 2vh;
 }
 
 .timeline_block {
-  height: 30vh;
-  width: 80vh;
-  border-radius: 5vh;
-  margin-top: 2vh;
-  margin-left: 20vh;
+  height: 40vh;
+  width: 75vh;
+  border-radius: 15px;
+  margin-top: 5vh;
+  margin-left: 25vh;
   background-color: rgba(2, 2, 2, 0.80);
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
 }
@@ -166,11 +176,11 @@ p2 {
 }
 
 .polar_block {
-  height: 31vh;
-  width: 30vh;
-  border-radius: 5vh;
-  margin-top: -31vh;
-  margin-left: 158vh;
+  height: 40vh;
+  width: 40vh;
+  border-radius: 15px;
+  margin-top: -91vh;
+  margin-left: 105vh;
   background-color: rgba(2, 2, 2, 0.404);
   box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
 
@@ -297,7 +307,8 @@ p1 {
 .dash-line-chart {
   height: 400px;
   width: 500px;
-  margin-left: 10vh;
+  margin-left: 2vh;
+  margin-top: 5vh;
 }
 
 .left-panel {
@@ -404,122 +415,5 @@ select  {
   margin-top: 5vh !important;
   margin-left: 32vh !important;
 }
-
-.comp_img {
-  height: 25vh;
-  width: 130vh;
-  margin-top: 20vh;
-  margin-left: 40vh;
-}
-
-.comp_image1 {
-  height: 25vh;
-  width: 25vh;
-  margin-top: 10vh;
-  border-radius: 5vh;
-  color: rgb(190, 10, 40);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
-  background-image: url("/src/images/uranus.avif");
-  background-size: cover;
-}
-
-.comp_image2 {
-  height:25vh;
-  width: 25vh;
-  margin-left: 35vh;
-  margin-top: -25vh;
-  border-radius: 5vh;
-  color: rgb(190, 10, 40);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
-  background-image: url("/src/images/neptune.jpg") ;
-  background-size: cover;
-  background-position: center;
-
-}
-
-.comp_image3 {
-  height: 25vh;
-  width: 25vh;
-  margin-left: 70vh;
-  margin-top: -25vh;
-  border-radius: 5vh;
-  color: rgb(190, 10, 40);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
-  background-image: url("/src/images/jupiter.jpeg") ;
-  background-size: cover;
-}
-
-.comp_image4 {
-  height: 25vh;
-  width: 25vh;
-  margin-left: 105vh;
-  margin-top: -25vh;
-  border-radius: 5vh;
-  color: rgb(190, 10, 40);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
-  background-image: url("/src/images/mars.jpeg") ;
-  background-size: cover;
-  background-position: center;
-
-}
-
-.comp_img2 {
-  height: 25vh;
-  width: 130vh;
-  margin-left: 40vh;
-}
-
-.comp_image5 {
-  height: 25vh;
-  width: 25vh;
-  margin-top: 10vh;
-  border-radius: 5vh;
-  color: rgb(251, 196, 65);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
-  background-image: url("/src/images/moon.jpg") ;
-  background-size: cover;
-}
-
-.comp_image6 {
-  height:25vh;
-  width: 25vh;
-  margin-left: 35vh;
-  margin-top: -25vh;
-  border-radius: 5vh;
-  color: rgb(190, 10, 40);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
-  background-image: url("/src/images/saturn.jpeg") ;
-  background-size: cover;
-  background-position: center;
-
-}
-
-.comp_image7 {
-  height: 25vh;
-  width: 25vh;
-  margin-left: 70vh;
-  margin-top: -25vh;
-  border-radius: 5vh;
-  color: rgb(190, 10, 40);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
-  background-image: url("/src/images/earth.jpeg") ;
-  background-size: cover;
-  background-position: center;
-
-}
-
-.comp_image8 {
-  height: 25vh;
-  width: 25vh;
-  margin-left: 105vh;
-  margin-top: -25vh;
-  border-radius: 5vh;
-  color: rgb(190, 10, 40);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
-  background-image: url("/src/images/venus.jpeg") ;
-  background-size: cover;
-  background-position: center;
-}
-
 
 
