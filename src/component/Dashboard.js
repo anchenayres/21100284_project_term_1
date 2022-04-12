@@ -80,12 +80,23 @@ const Dashboard = () =>{
             const comet = data.filter((item) => item.bodyType === "Comet").length;
 
             setgraphInfo([moon, planet, asteroid, comet]);
+
             
         })
     },[])
 
     return (
         <>
+
+        <div className="astro-1">
+        </div>
+        <p3>The Big Bang</p3>
+        <div className="nav-icons1">
+        </div>
+        <div className="nav-icons2">
+        </div>
+        <div className="nav-icons3">
+        </div>
       
         <h>The Solar System</h>
    
@@ -99,7 +110,7 @@ const Dashboard = () =>{
                     labels,
                     datasets: [
                         {
-                        label: ['timeline'],
+                        label: "Yearly Discoveries",
                         data: timeInfo,
                         borderColor: [
                             'rgb(255, 99, 132)',
