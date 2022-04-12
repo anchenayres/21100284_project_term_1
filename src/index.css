@@ -34,8 +34,8 @@ p3 {
   color: white;
   position: absolute;
   margin-left: -15vh;
-  margin-top: 19vh;
-
+  margin-top: 22vh;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .nav a, ul {
@@ -44,6 +44,8 @@ p3 {
   line-height: 5vh;
   text-align: center;
   margin-left: 15px;
+  font-family: 'Roboto Mono', monospace;
+
 }
 
 a {
@@ -82,7 +84,7 @@ a {
   position: absolute;
   margin-top: 5vh;
   margin-left: 4vh;
-  background-image: url("/src/images/astro1.jpeg");
+  background-image: url("/src/images/spacegif.gif");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 40vh;
@@ -147,10 +149,12 @@ a {
 
 h4 {
   color: white;
+  font-family: 'Roboto Mono', monospace;
 }
 
 p2 {
   font-size: 15px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .rocket {
@@ -505,6 +509,8 @@ select  {
   color: white;
   margin-top: 5vh !important;
   margin-left: 3vh !important;
+  font-family: 'Quicksand', sans-serif;
+
 }
 
 .selectTime  {
@@ -517,6 +523,8 @@ select  {
   color: white;
   margin-top: 5vh !important;
   margin-left: 4vh !important;
+  font-family: 'Quicksand', sans-serif;
+
 }
 
 

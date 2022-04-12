@@ -17,7 +17,7 @@
 <p align="center">
 
   <a href="https://github.com/anchenayres/21100284_project_term_1">
-    <img src="/src/images/astro1.png" width="250" height="200" border-radius="50%">
+    <img src="/src/images/spacegif.gif" width="250" height="200" border-radius="50%">
   </a>
   
   <h3 align="center">The Big Bang</h3>
@@ -75,7 +75,6 @@ The world we live in today is a world of big data and people have trouble findin
 
 * [React](https://reactjs.org/)
 * [Charts.js](https://www.npmjs.com/package/chart.js-v2)
-* [Technology Name](path/to/technology/website)
 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
