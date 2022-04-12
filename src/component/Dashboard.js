@@ -98,11 +98,9 @@ const Dashboard = () =>{
         <div className="nav-icons3">
         </div>
       
-        <h>The Solar System</h>
    
-        <div className="block-text"><p2>Welcome back to the SOLAR SYSTEM! Our system is a collection of planets, moons, asteroids, comets,
-            dust and gas which orbits around the star, the Sun. Around 4.6 billion years ago, a giant cloud of dust
-            and gas (solar nebula) collapsed in on itself and began to form the solar system's sun and planets.</p2></div>
+        <div className="block-text"><p2><h4>Welcome back!</h4>Here you will find all your conseded data which you have 
+        been looking for on The Big Bang platform in the react project. Feel free to explore! </p2></div>
         <div className="timeline_block">
             
         <div className="dash-line-chart">

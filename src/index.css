@@ -115,10 +115,10 @@ a {
 .block-text {
   height: 150px;
   width: 750px;
-  background-color: rgba(223, 255, 252, 0.719);
-  border-radius: 5vh;
-  margin-left: 20vh;
-  margin-top: 11vh;
+  background-color: rgb(0, 0, 0);
+  border-radius: 15px;
+  margin-left: 25vh;
+  margin-top: 1vh;
   color: white;
   font-size: 12px;
   text-align:start;
@@ -134,16 +134,15 @@ p2 {
 }
 
 .block_text_2 {
-  height: 30vh;
-  width: 30vh;
-  margin-top: -90vh;
-  margin-left: 158vh;
-  border-radius: 5vh;
-  color: rgb(190, 10, 40);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
-  background-image: url("/src/images/astro1.jpeg") ;
+  height: 20vh;
+  width: 20vh;
+  margin-top: -82vh;
+  margin-left: 724px;
+  border-radius: 30vh;
+  background-image: url("/src/images/astro4.jpeg") ;
   background-size: cover;
-
+  background-repeat: no-repeat;
+  background-position-y: -7vh;
 }
 
 .timeline_block {
