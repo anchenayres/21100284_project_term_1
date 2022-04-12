@@ -131,7 +131,7 @@ Description of Feature
 
 Description of Feature
 
-![image5][image5]
+![image5](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/prototype4.png)
 
 
 <!-- CONCEPT PROCESS -->
@@ -139,7 +139,7 @@ Description of Feature
 <!-- here you will add things like wireframing, data structure planning, anything that shows your process. You need to include images-->
 ## Concept Process
 
-The `Conceptual Process` is the set of actions, activities and research that was done when starting this project.
+The `Conceptual Process` is the set of actions, activities and research that was done when starting this project. For the conceptual process Pinterest was my best friend. I used this app to save all my ideas and explorations around specific UI Designs. I also watched YouTube videos of people creating various dashboards in javascript.
 
 ### Ideation
 
@@ -172,27 +172,31 @@ The `Development Process` is the technical implementations and functionality don
 
 #### Highlights
 <!-- stipulated the highlight you experienced with the project -->
-* What was good about this project, what did you learn.
-* What aspects did you enjoy.
+* How to implement Charts.js was exciting once I got it right although it did take me a while
+* I enjoyed searching for an API, there were so many to choose from and exploring various wireframes
+* I also enjoyed implementing my UI Element as well as choosing an overall theme for the web application
 
 #### Challenges
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
-* Bugs.
-* Bugs.
+* I struggled to work between two laptops, I struggled to clone the repositories 
+* Regularly had bugs
+* The functionality of this project was very time consuming and I had to seek help in order to see if my functions were on the right track
+* Specifically adding my time line on the Dashboard, as I had to add a substring in order to view just the year of the data which I eventually found through Stack overflow
+
 
 
 #### Above And Beyond
 
 What aspects of this final build contribute to the `Above And Beyond` Component of your brief?
 <!-- what did you learn outside of the classroom and implement into your project-->
-* Name of Skill Explored.
-* Explain your understanding and execution of above skill.
+* Gif
+* I added a gif on my Dashboard, Comparison and Time line page as my icon for the web application. Through so much trial and error I eventually figured out that it was actually simple, I just had to add the gif to the css and style it from there. 
 
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-* Future 1.
-* Future 2.
+* The styling of my graphs could be much better! I could have made it a bit more visually appealing and spend more time on it and I started styling them too late.
+* There could be more features in the web application, as many of the pages feel unfinished although I just tried to keep them simple, there could have been a bit more exploration to that aspect.
 
 <!-- MOCKUPS -->
 ## Final Outcome
