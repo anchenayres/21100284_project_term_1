@@ -3,21 +3,21 @@
 <!-- Repository Information & Links-->
 <br />
 
-![GitHub repo size](https://img.shields.io/github/repo-size/MikeMaynard14/termoneexample)
-![GitHub watchers](https://img.shields.io/github/watchers/MikeMaynard14/termoneexample)
-![GitHub language count](https://img.shields.io/github/languages/count/MikeMaynard14/termoneexample)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/MikeMaynard14/termoneexample)
+![GitHub repo size](https://img.shields.io/github/repo-size/anchenayres/21100284_project_term_1)
+![GitHub watchers](https://img.shields.io/github/watchers/anchenayres/21100284_project_term_1)
+![GitHub language count](https://img.shields.io/github/languages/count/anchenayres/21100284_project_term_1)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/anchenayres/21100284_project_term_1)
 
 
 <!-- HEADER SECTION -->
-<h5 align="center" style="padding:0;margin:0;">Anchen Ayres</h5>
+<h5 align="center" style="padding:0;margin:0;">Ayres</h5>
 <h5 align="center" style="padding:0;margin:0;">21100284</h5>
 <h6 align="center">DV200 - Term 1 | 2022</h6>
 </br>
 <p align="center">
 
-  <a href="https://github.com/MikeMaynard14/termoneexample">
-    <img src="src/assets/mascot.svg" alt="Logo" width="140" height="140">
+  <a href="https://github.com/anchenayres/21100284_project_term_1">
+    <img src="/src/images/astro1.jpeg" width="140" height="140">
   </a>
   
   <h3 align="center">The Big Bang</h3>
@@ -30,9 +30,9 @@
    <br />
    <a href="path/to/demonstration/video">View Demo</a>
     ·
-    <a href="https://github.com/MikeMaynard14/termoneexample/issues">Report Bug</a>
+    <a href="https://github.com/anchenayres/21100284_project_term_1/issues">Report Bug</a>
     ·
-    <a href="https://github.com/MikeMaynard14/termoneexample/issues">Request Feature</a>
+    <a href="https://github.com/anchenayres/21100284_project_term_1/issues">Request Feature</a>
 </p>
 <!-- TABLE OF CONTENTS -->
 
@@ -93,12 +93,12 @@ Ensure that you have the latest version of [NPM](https://www.npmjs.com/) install
 Here are a couple of ways to clone this repo:
 
 1. GitHub Desktop </br>
-Enter `https://github.com/MikeMaynard14/termoneexample.git` into the URL field and press the `Clone` button.
+Enter `https://github.com/anchenayres/21100284_project_term_1.git` into the URL field and press the `Clone` button.
 
 2. Clone Repository </br>
 Run the following in the command-line to clone the project:
    ```sh
-   git clone https://github.com/MikeMaynard14/termoneexample.git
+   git clone https://github.com/anchenayres/21100284_project_term_1.git
    ```
     Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
 
@@ -116,7 +116,7 @@ Run the following in the command-line to install all the required dependencies:
 ## Features and Functionality
 
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
-![image2](https://raw.githubusercontent.com/MikeMaynard14/termoneexample/main/src/assets/mockup.jpg)
+![image2](https://raw.githubusercontent.com/anchenayres/21100284_project_term_1/main/src/assets/mockup.jpg)
 
 ### All The Latest Space X Data! 
 
@@ -212,12 +212,12 @@ To see a run through of the application, click below:
 [View Demonstration](path/to/video/demonstration)
 
 
-See the [open issues](https://github.com/MikeMaynard14/termoneexample/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/anchenayres/21100284_project_term_1/issues) for a list of proposed features (and known issues).
 
 <!-- AUTHORS -->
 ## Authors
 
-* **Your Name & Surname** - [MikeMaynard14](https://github.com/MikeMaynard14)
+* **Your Name & Surname** - [anchenayres](https://github.com/anchenayres)
 
 <!-- LICENSE -->
 ## License
@@ -228,7 +228,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 ## Contact
 
 * **Your Name & Surname** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/) 
-* **Project Link** - https://github.com/MikeMaynard14/termoneexample
+* **Project Link** - https://github.com/anchenayres/21100284_project_term_1
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
