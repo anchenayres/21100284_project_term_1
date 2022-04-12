@@ -115,7 +115,7 @@ Run the following in the command-line to install all the required dependencies:
 ## Features and Functionality
 
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
-![image2](https://raw.githubusercontent.com/anchenayres/21100284_project_term_1/main/src/images/prototype1.png)
+![image2](https://github.com/anchenayres/21100284_project_term_1/src/images/prototype1.png)
 
 ### All The Latest Space X Data! 
 
