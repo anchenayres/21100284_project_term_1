@@ -17,7 +17,7 @@
 <p align="center">
 
   <a href="https://github.com/anchenayres/21100284_project_term_1">
-    <img src="/src/images/astro1.png" width="140" height="140" border-radius="50%">
+    <img src="/src/images/astro1.png" width="200" height="200" border-radius="50%">
   </a>
   
   <h3 align="center">The Big Bang</h3>
