@@ -151,8 +151,8 @@ The `Conceptual Process` is the set of actions, activities and research that was
 ### Wireframes
 
 ![image7](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/screenshot1.png)
-![image8](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/wireframe2.pdf)
-![image9](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/wireframe3.pdf)
+![image8](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/screenshot2.png)
+![image9](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/screenshot3.png)
 
 ### Custom UI
 
