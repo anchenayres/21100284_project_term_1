@@ -23,8 +23,7 @@
   <h3 align="center">The Big Bang</h3>
 
   <p align="center">
-    A react project using the Space X Api to demonstrate data visualization using charts js  <br>
-    <i>This However is a template file for DV200 Students!</i> 
+    A react project using the Solar System Api to demonstrate data visualization using charts js  <br>
     
    <br />
    <br />
@@ -64,17 +63,18 @@
 
 <!--PROJECT DESCRIPTION-->
 ## About the Project
+
 <!-- header image of project -->
 ![image1][image1]
 
 ### Project Description
 
-A nice introduction to this amazing project of mine.
+The world we live in today is a world of big data and people have trouble finding meaningful patterns within the expanse of information we mine, collect and store. Therefore, as a data driven developer, I have taken over the role of implementing a real-world data driven web application using a Solar System API. Within the web application I utilised Charts.js, implemented my own unique form of data visualisation which relates to the theme of the data set and used REACT to construct my front end.
 
 ### Built With
 
 * [React](https://reactjs.org/)
-* [Technology Name](path/to/technology/website)
+* [Charts.js](https://www.npmjs.com/package/chart.js-v2)
 * [Technology Name](path/to/technology/website)
 
 <!-- GETTING STARTED -->

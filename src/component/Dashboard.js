@@ -103,7 +103,7 @@ const Dashboard = () =>{
       
    
         <div className="block-text"><h4>Welcome back!</h4>
-        <p2>Here you will find all your conseded data which you have <br></br>
+        <p2>Here you will find all your condensed data which you have <br></br>
         been looking for on The Big Bang platform in the react project. <br></br>
         Feel free to explore! </p2>
         </div>
