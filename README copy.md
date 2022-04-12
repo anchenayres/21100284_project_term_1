@@ -74,7 +74,7 @@ The world we live in today is a world of big data and people have trouble findin
 ### Built With
 
 * [React](https://reactjs.org/)
-* [Axios] (https://api.le-systeme-solaire.net/rest/bodies/)
+* [Axios](https://api.le-systeme-solaire.net/rest/bodies/)
 * [Charts.js](https://www.npmjs.com/package/chart.js-v2)
 
 <!-- GETTING STARTED -->
