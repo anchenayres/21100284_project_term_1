@@ -108,68 +108,26 @@ const Dashboard = () =>{
         Feel free to explore! </p2>
         </div>
 
-        <div className="timeline_block">
-        <h6>Discoveries made throughout the years</h6>
-
-        <div className="dash-line-chart">
-                <Line data = {{
-                    labels,
-                    datasets: [
-                        {
-                        label: "Yearly Discoveries",
-                        data: timeInfo,
-                        borderColor: [
-                            'rgb(255, 99, 132)',
-                            'rgb(223, 119, 255)',
-                            'rgb(235, 255, 119)',
-                            'rgb(142, 255, 119)',
-                            'rgb(255, 119, 248)',
-                            'rgb(223, 119, 255)',
-                            'rgb(235, 255, 119)',
-                            'rgb(142, 255, 119)',
-                            'rgb(255, 119, 248)'
-                        ],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.5)',
-                            'rgba(223, 119, 255, 0.5)',
-                            'rgba(235, 255, 119, 0.5)',
-                            'rgba(142, 255, 119, 0.5)',
-                            'rgba(255, 119, 248, 0.5)',
-                            'rgba(223, 119, 255, 0.5)',
-                            'rgba(235, 255, 119, 0.5)',
-                            'rgba(142, 255, 119, 0.5)',
-                            'rgba(255, 119, 248, 0.5)'
-                        ]
-                        
-                        }, 
-                    ],
-                }} 
-                />
-            </div>
-        </div>
         <div className="bar_block">
                 <div className="dash-bar">
                 <h5>Bar Chart Discovery Total</h5>
             <Bar data= {{
-        labels: ['Gauteng', 'Freestate', 'Limpopo', 'Eastern Cape', 'Kwazulu-Natal', 'Northern Cape'],
+        labels: ['moon', 'planet', 'asteroid', 'comet'],
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: graphInfo,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
                 'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+               
             ],
             borderWidth: 1
         }]
@@ -177,6 +135,7 @@ const Dashboard = () =>{
             />
         </div>
         </div>
+
         <div className="pie_block">
         <div className="dash-pie-graph">
             <Pie data= {{
@@ -236,6 +195,48 @@ const Dashboard = () =>{
             
         </div>
         </div>
+
+        <div className="timeline_block">
+        <div className="dash-line-chart">
+                <Line data = {{
+                    labels,
+                    datasets: [
+                        {
+                        label: "Yearly Discoveries",
+                        data: timeInfo,
+                        borderColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(223, 119, 255)',
+                            'rgb(235, 255, 119)',
+                            'rgb(142, 255, 119)',
+                            'rgb(255, 119, 248)',
+                            'rgb(223, 119, 255)',
+                            'rgb(235, 255, 119)',
+                            'rgb(142, 255, 119)',
+                            'rgb(255, 119, 248)'
+                        ],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.5)',
+                            'rgba(223, 119, 255, 0.5)',
+                            'rgba(235, 255, 119, 0.5)',
+                            'rgba(142, 255, 119, 0.5)',
+                            'rgba(255, 119, 248, 0.5)',
+                            'rgba(223, 119, 255, 0.5)',
+                            'rgba(235, 255, 119, 0.5)',
+                            'rgba(142, 255, 119, 0.5)',
+                            'rgba(255, 119, 248, 0.5)'
+                        ]
+                        
+                        }, 
+                    ],
+                }} 
+                />
+            </div>
+        </div>
+        
+        
+
+        
         <div className="block_text_2">Text</div>
         </>
     );

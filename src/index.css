@@ -126,7 +126,23 @@ a {
   padding-right: 10px;
   padding-bottom: 10px;
   padding-top:7vh;
+}
 
+.block-text-directions {
+  height: 260px;
+  width: 750px;
+  background-color: rgb(19, 19, 19);
+  border-radius: 15px;
+  margin-left: 105vh;
+  margin-top: -26vh;
+  color: white;
+  font-size: 12px;
+  text-align:start;
+  padding-left: 30px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top:7vh;
+  position: absolute;
 }
 
 h4 {
@@ -140,12 +156,24 @@ p2 {
 .rocket {
   height: 45vh;
   width: 45vh;
+  border-radius: 50%;
   margin-left: 68vh;
   margin-top: -6vh;
   background-image: url("/src/images/manmoon2.png") ;
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
+}
+
+.manmoon3 {
+  background-image: url("/src/images/manmoon3.png") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 40vh;
+  width: 40vh;
+  margin-left: 65vh;
+  margin-top: -13vh;
 }
 
 
@@ -155,15 +183,109 @@ h6 {
   margin-left: 2vh;
 }
 
+/*COMPARISON GRAPH RESULTS*/
+p4 {
+  color: rgb(255, 255, 255);
+  margin-left: 5vh;
+}
+
+h7 {
+  color: rgb(193, 168, 168);
+  font-size: 40px;
+  margin-left: 5vh;
+}
+
+.result-table {
+  background-color: rgb(19, 19, 19);
+  border-radius: 15px;
+  padding-top: 3vh;
+  margin-top: 10vh;
+  height: 25vh;
+  width: 45vh;
+  margin-left: 82vh;  
+  position: absolute;
+}
+
+.result-table1 {
+  background-color: rgb(19, 19, 19);
+  border-radius: 15px;
+  padding-top: 3vh;
+  margin-top: 10vh;
+  height: 25vh;
+  width: 45vh;
+  margin-left: 25vh;  
+  position: absolute;
+}
+
+.result-table3 {
+  background-color: rgb(19, 19, 19);
+  border-radius: 15px;
+  padding-top: 3vh;
+  margin-top: 10vh;
+  height: 25vh;
+  width: 45vh;
+  margin-left: 138vh;  
+  position: absolute;
+
+}
+
 .timeline_block {
   height: 40vh;
   width: 75vh;
   border-radius: 15px;
   margin-top: 5vh;
-  margin-left: 25vh;
-  background-color: rgba(2, 2, 2, 0.80);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  margin-left: 65vh;
+  background-color: rgb(19, 19, 19);
+  box-shadow: 0px 5px 15px rgba(12, 78, 87, 0.4);
 }
+
+.polar_block {
+  height: 40vh;
+  width: 50vh;
+  border-radius: 15px;
+  margin-top: -40vh;
+  margin-left: 135vh;
+  background-color: rgb(19, 19, 19);
+  box-shadow: 0px 5px 15px rgba(12, 78, 87, 0.4);
+}
+
+.bar_block {
+  height: 40vh;
+  width: 50vh;
+  border-radius: 15px;
+  margin-top: 3vh;
+  padding-top: 3vh;
+  margin-left: 25vh;
+  background-color: rgb(19, 19, 19);
+  color: rgb(230, 185, 40);
+  box-shadow: 0px 5px 15px rgba(12, 78, 87, 0.4);
+
+}
+
+.pie_block {
+  height: 40vh;
+  width: 50vh;
+  border-radius: 15px;
+  margin-top: -40vh;
+  margin-left: 80vh;
+  background-color: rgb(19, 19, 19);
+  color: pink;
+  box-shadow: 0px 5px 15px rgba(12, 78, 87, 0.4);
+  position: absolute;
+}
+
+.dash-pie-graph {
+  width: 35vh;
+  margin-left: 7vh;  
+  padding-top: 3vh;
+
+} 
+
+.dash-polar-graph {
+  width: 35vh;
+  margin-left: 7vh;
+  padding-top: 3vh;
+} 
 
 .timeline-timeline-block {
   height: 35vh;
@@ -171,55 +293,9 @@ h6 {
   border-radius: 5vh;
   margin-top: 15vh;
   margin-left: 20vh;
-  background-color: rgba(2, 2, 2, 0.404);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  background-color: rgb(19, 19, 19);
+  box-shadow: 0px 5px 15px rgba(12, 78, 87, 0.4);
 }
-
-.polar_block {
-  height: 40vh;
-  width: 40vh;
-  border-radius: 15px;
-  margin-top: -91vh;
-  margin-left: 105vh;
-  background-color: rgba(2, 2, 2, 0.404);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
-
-}
-
-.bar_block {
-  height: 31vh;
-  width: 40vh;
-  border-radius: 5vh;
-  margin-top: 3vh;
-  padding-top: 3vh;
-  margin-left: 20vh;
-  background-color: rgba(2, 2, 2, 0.404);
-  color: rgb(230, 185, 40);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
-
-}
-
-.dash-bar {
-  margin-top: -2vh;
-}
-
-.pie_block {
-  height: 31vh;
-  width: 40vh;
-  border-radius: 5vh;
-  margin-top: -31vh;
-  margin-left: 63vh;
-  background-color: rgba(2, 2, 2, 0.404);
-  color: pink;
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
-}
-
-.dash-pie-graph {
-  height: 30vh;
-  width: 30vh;
-  margin-left: 5vh;  
-} 
-
 
 
 p {
@@ -290,6 +366,12 @@ p1 {
   margin-top: 30vh;
 }
 
+.bar-block {
+  background-color: rebeccapurple;
+  height: 40vh;
+  width: 40vh;
+}
+
 .timeline-timeline {
   height: 500px;
   width: 700px;
@@ -299,16 +381,18 @@ p1 {
 .timeline-timeline-block {
   height: 400px;
   width: 1130px;
-  margin-left: 20vh;
+  margin-left: 25vh;
+  margin-top: 5vh;
+
   padding-top: 1vh;
   padding-left: 10vh;
 }
 
 .dash-line-chart {
   height: 400px;
-  width: 500px;
-  margin-left: 2vh;
-  margin-top: 5vh;
+  width: 650px;
+  margin-left: 4vh;
+  padding-top: 3vh;
 }
 
 .left-panel {
@@ -346,6 +430,7 @@ p1 {
   padding-left: 5vh;
   padding-top: vh;
   width: 60vh;
+  padding-bottom: 5vh;
 }
 
 .comp-bar-block {
@@ -353,9 +438,9 @@ p1 {
   width: 67vh;
   margin-left: 70vh;
   margin-top: 3vh;
-  border-radius: 5vh;
-  background-color: rgba(2, 2, 2, 0.404);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  border-radius: 15px;
+  background-color: rgba(19, 19, 19);
+  box-shadow: 0px 5px 15px rgba(87, 12, 12, 0.4);
 }
 
 .comp-pie {
@@ -363,17 +448,19 @@ p1 {
   width: 350px;
   margin-top: 2vh;
   margin-left: 3vh;
+  margin-bottom: 5vh;
+
 }
 
 
 .comp-pie-block {
-  height: 40vh;
+  height: 400px;
   width: 40vh;
-  border-radius: 5vh;
+  border-radius: 15px;
   margin-top: -42vh;
   margin-left: 142vh;
-  background-color: rgba(2, 2, 2, 0.404);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  background-color: rgba(19, 19, 19);
+  box-shadow: 0px 5px 15px rgba(87, 12, 12, 0.4);
 }
 
 h5 {
@@ -387,18 +474,19 @@ h5 {
   width: 305h;
   margin-left: 2vh;
   margin-top: 2vh;
+  margin-bottom: 2vh;
+
 }
 
 .comp-polar-block {
-  height: 40vh;
+  height: 400px;
   width: 40vh;
-  border-radius: 5vh;
+  border-radius: 15px;
   margin-top: -40vh;
   margin-left: 25vh;
   padding-top: 1vh;
-  background-color: rgba(2, 2, 2, 0.404);
-  color: rgb(161, 116, 245);
-  box-shadow: 0px 5px 15px rgba(168, 167, 167, 0.4);
+  background-color: rgba(19, 19, 19);
+  box-shadow: 0px 5px 15px rgba(87, 12, 12, 0.4);
 }
 
 .con2 {
@@ -408,12 +496,28 @@ h5 {
 }
 
 select  {
-  background-color: rgb(79, 116, 128) !important;
-  border-radius: 5px;
+  background-color: rgb(174, 39, 39) !important;
+  height: 5vh;
+  width: 15vh;
+  padding-left: 1vh;
+  border-radius: 10px;
   border-style: none;
   color: white;
   margin-top: 5vh !important;
-  margin-left: 32vh !important;
+  margin-left: 3vh !important;
 }
+
+.selectTime  {
+  background-color: rgb(174, 39, 39) !important;
+  height: 5vh;
+  width: 15vh;
+  padding-left: 1vh;
+  border-radius: 10px;
+  border-style: none;
+  color: white;
+  margin-top: 5vh !important;
+  margin-left: 4vh !important;
+}
+
 
 

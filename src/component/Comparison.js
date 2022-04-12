@@ -3,7 +3,6 @@ import "chart.js/auto";
 import axios from "axios";
 import { useState, useEffect, useRef } from 'react';
 import { Bar, Pie, PolarArea } from 'react-chartjs-2';
-import TableItem from "./TableItem";
 
 
 
@@ -32,7 +31,7 @@ const Comparison = () => {
     let selectedPlanetOne = useRef();
     const getPlanetOne = () => {
         let planetOneName = selectedPlanetOne.current.value;
-        setPlanetOneInfo(planetInfo.filter((item) => item.englishName == planetOneName))
+        setPlanetOneInfo(planetInfo.filter((item) => item.englishName === planetOneName))
         setPlanetOneName(planetOneName);
     }
   
@@ -43,45 +42,49 @@ const Comparison = () => {
     let selectedPlanetTwo = useRef();
     const getPlanetTwo = () => {
         let planetTwoName = selectedPlanetTwo.current.value;
-        setPlanetTwoInfo(planetInfo.filter((item) => item.englishName == planetTwoName))
+        setPlanetTwoInfo(planetInfo.filter((item) => item.englishName === planetTwoName))
         setPlanetTwoName(planetTwoName);
     }
 
 
     const [chartData, setChartData] = useState([]);
+    const [planetOneData, setPlanetOneData] = useState();
+    const [planetTwoData, setPlanetTwoData] = useState();
+
     let selectedStat = useRef();
+
+    const [statTypeValue, setStatTypeValue] = useState();
     const getStats = () => {
         let stat = selectedStat.current.value;
         let planetOneStatValue = planetOneInfo[0][stat];
         let planetTwoStatValue = planetTwoInfo[0][stat];
 
+        let statType = ""
+        if (stat == "avgTemp"){
+            statType ="Average Temperature"
+        } else if (stat == "density"){
+            statType ="Density"
+        } else if (stat == "equaRadius"){
+            statType ="Equatorial Radius"
+        } else if (stat == "polarRadius"){
+            statType ="Polar Radius"
+        } else if (stat == "gravity"){
+            statType ="Gravity"
+        }
 
+        setStatTypeValue(statType);
+
+        console.log(chartData)
         setChartData([planetOneStatValue, planetTwoStatValue]);
-        
+        setPlanetOneData(planetOneStatValue);
+        setPlanetTwoData(planetTwoStatValue);
+    
     }
 
-    const chartInfo = {
-        labels: ['moon', 'planet', 'asteroid', 'comet'],
-        datasets: [{
-            label: '# of Votes',
-            data: chartData,
-            backgroundColor: [
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(300, 26, 245, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(300, 26, 245, 0.2)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-            } 
+
+    console.log(planetOneData)
+
+   
 
 
   
@@ -101,32 +104,40 @@ const Comparison = () => {
 
       
    
-        <div className="block-text"><h4>Welcome back!</h4>
-        <p2>Here you will find all your conseded data which you have <br></br>
-        been looking for on The Big Bang platform in the react project. <br></br>
-        Feel free to explore! </p2>
+        <div className="block-text"><h4>You Shouldn't Wonder!</h4>
+        <p2>The Big Bang provides you with information regarding<br></br>
+        the eight planets in the Solar System so you won't have to <br></br>
+        wonder what it is. </p2>
+        </div>
+
+        <div className="block-text-directions"><h4>Compare Directions</h4>
+        <p2>Locate the drop down functions and select two planets<br></br>
+        and the information you would like to compare. <br></br>
+        Feel free to play around! </p2>
         </div>
 
      
 
 
                 
-                    <select className="select" onChange={getPlanetOne} ref={selectedPlanetOne}>
+        <select onChange={getPlanetTwo} ref={selectedPlanetTwo}>
+                        <option>Choose Planets</option>
+                        {
+                            planetInfo.map(item => <option value={item.englishName}>{item.englishName}</option>)
+                        }
+                    </select>
+                    
+                    <select onChange={getPlanetOne} ref={selectedPlanetOne}>
                         <option>Choose Planets</option>
                         {
                             planetInfo.map(item => <option value={item.englishName}>{item.englishName}</option>)
                         }
                     </select>
 
-                    <select className="select" onChange={getPlanetTwo} ref={selectedPlanetTwo}>
-                        <option>Choose Planets</option>
-                        {
-                            planetInfo.map(item => <option value={item.englishName}>{item.englishName}</option>)
-                        }
-                    </select>
+                    
 
-                    <select className="select" onChange={getStats} ref={selectedStat}>
-                        <option>Choose stats to compare</option>
+                    <select onChange={getStats} ref={selectedStat}>
+                        <option>Compare Stats</option>
                         <option value="avgTemp">Average Temp</option>
                         <option value="density">Density</option>
                         <option value="equaRadius">Equatorial Radius</option>
@@ -135,7 +146,7 @@ const Comparison = () => {
                         
                     </select>
 
-                
+            
 
                
                 <div className="comp-bar-block">
@@ -145,22 +156,29 @@ const Comparison = () => {
         datasets: [{
             label: [planetOneName, planetTwoName],
             data: chartData,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                
-            ],
-            borderWidth: 1
-        }]
-    }} height={400} width={600} option={{}}
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor:  'rgba(255, 99, 132, 1)'
+        }]    }} height={400} width={600} option={{}}
             />
+
+
         </div>
+        
+
         </div>
+
+
+        <div className="result-table">
+        <p4>The {statTypeValue} of {planetOneName} is: <br></br><h7>{planetOneData}</h7>
+        <br></br></p4>
+        <p4>The {statTypeValue} of {planetTwoName} is: <br></br><h7>{planetTwoData}</h7>
+        </p4>
+        </div>
+
+        <div className="manmoon3"></div>
+
+
+    
                 
         <div className="comp-pie-block">
         <div className="comp-pie">
@@ -181,6 +199,12 @@ const Comparison = () => {
             }} height={400} width={600} option={{}}
             />
         </div>
+        </div>
+        <div className="result-table3">
+        <p4>The {statTypeValue} of {planetOneName} is: <br></br><h7>{planetOneData}</h7>
+        <br></br></p4>
+        <p4>The {statTypeValue} of {planetTwoName} is: <br></br><h7>{planetTwoData}</h7>
+        </p4>
         </div>
 
         <div className="comp-polar-block">
@@ -203,6 +227,13 @@ const Comparison = () => {
             />
         
         </div>
+        </div>
+
+        <div className="result-table1">
+        <p4>The {statTypeValue} of {planetOneName} is: <br></br><h7>{planetOneData}</h7>
+        <br></br></p4>
+        <p4>The {statTypeValue} of {planetTwoName} is: <br></br><h7>{planetTwoData}</h7>
+        </p4>
         </div>
 
         <div className="comp_img2">

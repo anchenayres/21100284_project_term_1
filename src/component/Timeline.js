@@ -44,8 +44,12 @@ const Timeline = () => {
             for (let i = 0; i < moonLabelsFinal.length; i++) {
                 moonCount.push(moonLabels.filter(item => item == moonLabelsFinalSorted[i]).length)
             }
+
+
             setMoonData(moonCount);
             console.log(moonCount);
+
+
 
             let planetLabels = planets.map(item => item.discoveryDate.substring(6));
             let planetLabelsFinal = [...new Set(planetLabels)];
@@ -76,9 +80,13 @@ const Timeline = () => {
             }
             setAsteroidData(asteroidCount);
             console.log(asteroidCount);
+
+
             
         })
     },[])
+
+
 
     let selectedStat = useRef();
     const [chartData, setChartData] = useState([]);
@@ -158,8 +166,8 @@ const Timeline = () => {
         Feel free to explore! </p2>
         </div>
 
-        <select className="select" onChange={getStats} ref={selectedStat}>
-                        <option>Choose stats to compare</option>
+        <select className="selectTime" onChange={getStats} ref={selectedStat}>
+                        <option>Compare Stats</option>
                         <option value="moons">Moons</option>
                         <option value="planets">Planets</option>
                         <option value="asteroids">Asteroids</option>                        
