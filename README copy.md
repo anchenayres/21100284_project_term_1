@@ -149,11 +149,14 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Wireframes
 
-![image7][image7]
+![image7](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/wireframe1.pdf)
+![image8](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/wireframe2.pdf)
+![image9](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/wireframe3.pdf)
 
 ### Custom UI
 
-![image8][image8]
+![image10](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/prototype2.png)
+
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
@@ -203,9 +206,9 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 
 ### Mockups
 
-![image9][image9]
+![image11](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/prototype1.png)
 <br>
-![image10][image10]
+![image12](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/prototype2.png)
 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
