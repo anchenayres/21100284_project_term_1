@@ -74,6 +74,7 @@ The world we live in today is a world of big data and people have trouble findin
 ### Built With
 
 * [React](https://reactjs.org/)
+* [Axios] (axios)
 * [Charts.js](https://www.npmjs.com/package/chart.js-v2)
 
 <!-- GETTING STARTED -->
@@ -149,7 +150,7 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Wireframes
 
-![image7](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/wireframe1.pdf)
+![image7](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/screenshot)
 ![image8](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/wireframe2.pdf)
 ![image9](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/wireframe3.pdf)
 
