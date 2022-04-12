@@ -144,9 +144,9 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Ideation
 
-![image5][image5]
+![image5](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/pinterest1.png)
 <br>
-![image6][image6]
+![image6](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/pinterest2.png)
 
 ### Wireframes
 
