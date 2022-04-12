@@ -10,14 +10,14 @@
 
 
 <!-- HEADER SECTION -->
-<h5 align="center" style="padding:0;margin:0;">Ayres</h5>
+<h5 align="center" style="padding:0;margin:0;">Anchen Ayres</h5>
 <h5 align="center" style="padding:0;margin:0;">21100284</h5>
 <h6 align="center">DV200 - Term 1 | 2022</h6>
 </br>
 <p align="center">
 
   <a href="https://github.com/anchenayres/21100284_project_term_1">
-    <img src="/src/images/astro1.jpeg" width="140" height="140">
+    <img src="/src/images/astro1.jpeg" width="140" height="140" border-radius="50%">
   </a>
   
   <h3 align="center">The Big Bang</h3>
