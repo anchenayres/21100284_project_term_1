@@ -65,7 +65,7 @@
 ## About the Project
 
 <!-- header image of project -->
-![image1][image1]
+![image1](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/finalmock.png)
 
 ### Project Description
 
