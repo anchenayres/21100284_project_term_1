@@ -216,7 +216,7 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 
 To see a run through of the application, click below:
 
-[View Demonstration](path/to/video/demonstration)
+[View Demonstration](https://github.com/anchenayres/21100284_project_term_1/blob/main/src/images/demo.mov)
 
 
 See the [open issues](https://github.com/anchenayres/21100284_project_term_1/issues) for a list of proposed features (and known issues).
