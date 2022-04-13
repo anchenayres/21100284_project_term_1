@@ -160,10 +160,10 @@ const Timeline = () => {
 
       
    
-        <div className="block-text"><h4>Welcome back!</h4>
-        <p2>Here you will find all your conseded data which you have <br></br>
-        been looking for on The Big Bang platform in the react project. <br></br>
-        Feel free to explore! </p2>
+        <div className="block-text"><h4>You Shouldn't Wonder!</h4>
+        <p2>Here you will find specific information regarding the moons, <br></br>
+        planets and asteroids. Simply select what you want to view <br></br>
+        over the ten years</p2>
         </div>
 
         <select className="selectTime" onChange={getStats} ref={selectedStat}>

@@ -236,12 +236,8 @@ const Comparison = () => {
         </p4>
         </div>
 
-        <div className="comp_img2">
-        <div className="comp_image5">Text</div>
-        <div className="comp_image6">Text</div>
-        <div className="comp_image7">Text</div>
-        <div className="comp_image8">Text</div>
-        </div>
+        
+      
 
                 
         </>

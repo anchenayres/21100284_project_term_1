@@ -150,6 +150,7 @@ a {
 h4 {
   color: white;
   font-family: 'Roboto Mono', monospace;
+  font-size: 25px;
 }
 
 p2 {
@@ -470,7 +471,8 @@ p1 {
 h5 {
   color: white;
   text-align: center;
-  font-size: 5px;
+  font-size: 15px;
+  margin-top: 0;
 }
 
 .comp-polar {
